@@ -1,0 +1,112 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E6D2E068-B278-4A86-AB35-8C24671F58C6}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.LogAnalyzer.Services.WebApi", "Naviam.LogAnalyzer.Services.WebApi\Naviam.LogAnalyzer.Services.WebApi.csproj", "{0B24BF8A-5938-462D-9B63-FDF46F8684C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.LogAnalyzer.Services.Messages", "Naviam.LogAnalyzer.Services.Messages\Naviam.LogAnalyzer.Services.Messages.csproj", "{EB29BFB3-D796-48C7-8B84-EB188CE37F57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.LogAnalyzer.UI.Web", "Naviam.LogAnalyzer.UI.Web\Naviam.LogAnalyzer.UI.Web.csproj", "{393B82CC-C795-4B59-95A1-CB49C55C52E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. QA", "1. QA", "{DA53EFAC-7E9C-4E55-A9E6-410CE0853831}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. UI", "2. UI", "{0E719449-7CA2-473A-91CE-29425D7AB30D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Services", "3. Services", "{B5FCE8D9-AA47-4364-8405-1EEB9FB579F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infrastructure", "4. Infrastructure", "{1EA214BD-4687-4418-AD23-5F2D0D4A57CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Repository", "5. Repository", "{AF875A4C-8E32-49F7-9E0B-530DC5B15DC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.LogAnalyzer.Infrastructure", "Naviam.LogAnalyzer.Infrastructure\Naviam.LogAnalyzer.Infrastructure.csproj", "{AC1A6B51-B365-406C-9BDB-793CD2EF7D48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.LogAnalyzer.Repository.DynamoDb", "Naviam.LogAnalyzer.Repository.DynamoDb\Naviam.LogAnalyzer.Repository.DynamoDb.csproj", "{C1EE12E5-BE7A-415A-9097-872E962B4FAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.LogAnalyzer.QA.Specs", "Naviam.LogAnalyzer.QA.Specs\Naviam.LogAnalyzer.QA.Specs.csproj", "{887616C5-E881-468E-BB56-7E4C31991D9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.LogAnalyzer.QA.UnitTests", "Naviam.LogAnalyzer.QA.UnitTests\Naviam.LogAnalyzer.QA.UnitTests.csproj", "{B50AEE93-F3BD-43E9-BDFC-F2772A2723E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.LogAnalyzer.UI.Controllers", "Naviam.LogAnalyzer.UI.Controllers\Naviam.LogAnalyzer.UI.Controllers.csproj", "{1CD245B9-8B26-4614-B25F-77C702C8DE54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.LogAnalyzer.Services.Contracts", "Naviam.LogAnalyzer.Services.Contracts\Naviam.LogAnalyzer.Services.Contracts.csproj", "{F76461F4-E70C-454B-922A-81D6DEC315C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.LogAnalyzer.Services.Proxy", "Naviam.LogAnalyzer.Services.Proxy\Naviam.LogAnalyzer.Services.Proxy.csproj", "{8AD1416D-D2D7-4107-B8B7-F76F4D83EB1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6. Domain Model", "6. Domain Model", "{63114B6C-106B-4658-85B2-B6E899246233}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.LogAnalyzer.Model", "Naviam.LogAnalyzer.Model\Naviam.LogAnalyzer.Model.csproj", "{13571DCA-D03A-4E33-96F5-022EE41139FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B24BF8A-5938-462D-9B63-FDF46F8684C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B24BF8A-5938-462D-9B63-FDF46F8684C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B24BF8A-5938-462D-9B63-FDF46F8684C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B24BF8A-5938-462D-9B63-FDF46F8684C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB29BFB3-D796-48C7-8B84-EB188CE37F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB29BFB3-D796-48C7-8B84-EB188CE37F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB29BFB3-D796-48C7-8B84-EB188CE37F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB29BFB3-D796-48C7-8B84-EB188CE37F57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{393B82CC-C795-4B59-95A1-CB49C55C52E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393B82CC-C795-4B59-95A1-CB49C55C52E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393B82CC-C795-4B59-95A1-CB49C55C52E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393B82CC-C795-4B59-95A1-CB49C55C52E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC1A6B51-B365-406C-9BDB-793CD2EF7D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC1A6B51-B365-406C-9BDB-793CD2EF7D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC1A6B51-B365-406C-9BDB-793CD2EF7D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC1A6B51-B365-406C-9BDB-793CD2EF7D48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1EE12E5-BE7A-415A-9097-872E962B4FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1EE12E5-BE7A-415A-9097-872E962B4FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1EE12E5-BE7A-415A-9097-872E962B4FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1EE12E5-BE7A-415A-9097-872E962B4FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{887616C5-E881-468E-BB56-7E4C31991D9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{887616C5-E881-468E-BB56-7E4C31991D9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{887616C5-E881-468E-BB56-7E4C31991D9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{887616C5-E881-468E-BB56-7E4C31991D9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B50AEE93-F3BD-43E9-BDFC-F2772A2723E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B50AEE93-F3BD-43E9-BDFC-F2772A2723E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B50AEE93-F3BD-43E9-BDFC-F2772A2723E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B50AEE93-F3BD-43E9-BDFC-F2772A2723E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CD245B9-8B26-4614-B25F-77C702C8DE54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD245B9-8B26-4614-B25F-77C702C8DE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD245B9-8B26-4614-B25F-77C702C8DE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD245B9-8B26-4614-B25F-77C702C8DE54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F76461F4-E70C-454B-922A-81D6DEC315C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F76461F4-E70C-454B-922A-81D6DEC315C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F76461F4-E70C-454B-922A-81D6DEC315C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F76461F4-E70C-454B-922A-81D6DEC315C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD1416D-D2D7-4107-B8B7-F76F4D83EB1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD1416D-D2D7-4107-B8B7-F76F4D83EB1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD1416D-D2D7-4107-B8B7-F76F4D83EB1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD1416D-D2D7-4107-B8B7-F76F4D83EB1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13571DCA-D03A-4E33-96F5-022EE41139FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13571DCA-D03A-4E33-96F5-022EE41139FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13571DCA-D03A-4E33-96F5-022EE41139FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13571DCA-D03A-4E33-96F5-022EE41139FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{887616C5-E881-468E-BB56-7E4C31991D9A} = {DA53EFAC-7E9C-4E55-A9E6-410CE0853831}
+		{B50AEE93-F3BD-43E9-BDFC-F2772A2723E1} = {DA53EFAC-7E9C-4E55-A9E6-410CE0853831}
+		{393B82CC-C795-4B59-95A1-CB49C55C52E0} = {0E719449-7CA2-473A-91CE-29425D7AB30D}
+		{1CD245B9-8B26-4614-B25F-77C702C8DE54} = {0E719449-7CA2-473A-91CE-29425D7AB30D}
+		{0B24BF8A-5938-462D-9B63-FDF46F8684C0} = {B5FCE8D9-AA47-4364-8405-1EEB9FB579F9}
+		{EB29BFB3-D796-48C7-8B84-EB188CE37F57} = {B5FCE8D9-AA47-4364-8405-1EEB9FB579F9}
+		{F76461F4-E70C-454B-922A-81D6DEC315C1} = {B5FCE8D9-AA47-4364-8405-1EEB9FB579F9}
+		{8AD1416D-D2D7-4107-B8B7-F76F4D83EB1A} = {B5FCE8D9-AA47-4364-8405-1EEB9FB579F9}
+		{AC1A6B51-B365-406C-9BDB-793CD2EF7D48} = {1EA214BD-4687-4418-AD23-5F2D0D4A57CF}
+		{C1EE12E5-BE7A-415A-9097-872E962B4FAC} = {AF875A4C-8E32-49F7-9E0B-530DC5B15DC0}
+		{13571DCA-D03A-4E33-96F5-022EE41139FD} = {63114B6C-106B-4658-85B2-B6E899246233}
+	EndGlobalSection
+EndGlobal
