@@ -1,33 +1,36 @@
 ﻿namespace Naviam.DataGenerator
 {
     using System;
-    using System.Collections.Generic;
+    using System.Configuration;
     using System.Net.Http;
+    using System.Text;
     using System.Threading;
-    using System.Threading.Tasks;
+    using System.Web.Script.Serialization;
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            const int Sleep = 5;
+            int sleep;
+            int.TryParse(ConfigurationManager.AppSettings["sleep"] ?? "1000", out sleep);
+            
             while (true)
             {
-                PostData();
-                Thread.Sleep(Sleep * 1000);
+                PostData(ConfigurationManager.AppSettings["url_host"] ?? string.Empty);
+                Thread.Sleep(sleep);
             }
         }
 
-        public static void PostData()
+        public static void PostData(string url)
         {
-            var url = new Uri(@"http://localhost:6740");
             using (var client = new HttpClient())
             {
                 try
                 {
-                    var content = new FormUrlEncodedContent(new[] { new KeyValuePair<string, string>("1", "login") });
+                    var json = new JavaScriptSerializer().Serialize(TestMessage.GetRandomInstance());
+                    var content = new StringContent(json, Encoding.UTF8, "application/json");
                     var result = client.PostAsync(url, content).Result;
-                    string resultContent = result.Content.ReadAsStringAsync().Result;
+                    var resultContent = result.Content.ReadAsStringAsync().Result;
                     Console.WriteLine(resultContent);
                 }
                 catch (Exception ex)
