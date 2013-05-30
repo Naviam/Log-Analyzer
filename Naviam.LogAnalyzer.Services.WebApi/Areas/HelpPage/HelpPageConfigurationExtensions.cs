@@ -7,9 +7,9 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Description;
-using Naviam.LogAnalyzer.Services.WebApi.Areas.HelpPage.Models;
+using Naviam.DataAnalyzer.Services.WebApi.Areas.HelpPage.Models;
 
-namespace Naviam.LogAnalyzer.Services.WebApi.Areas.HelpPage
+namespace Naviam.DataAnalyzer.Services.WebApi.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

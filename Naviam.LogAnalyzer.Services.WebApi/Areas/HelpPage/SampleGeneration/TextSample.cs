@@ -1,6 +1,6 @@
 using System;
 
-namespace Naviam.LogAnalyzer.Services.WebApi.Areas.HelpPage
+namespace Naviam.DataAnalyzer.Services.WebApi.Areas.HelpPage
 {
     /// <summary>
     /// This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.

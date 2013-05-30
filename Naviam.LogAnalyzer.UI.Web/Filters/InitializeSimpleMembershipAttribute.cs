@@ -4,9 +4,9 @@ using System.Data.Entity.Infrastructure;
 using System.Threading;
 using System.Web.Mvc;
 using WebMatrix.WebData;
-using Naviam.LogAnalyzer.UI.Web.Models;
+using Naviam.DataAnalyzer.UI.Web.Models;
 
-namespace Naviam.LogAnalyzer.UI.Web.Filters
+namespace Naviam.DataAnalyzer.UI.Web.Filters
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
     public sealed class InitializeSimpleMembershipAttribute : ActionFilterAttribute

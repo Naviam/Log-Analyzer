@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Naviam.LogAnalyzer.Services.WebApi
+namespace Naviam.DataAnalyzer.Services.WebApi
 {
     public class RouteConfig
     {

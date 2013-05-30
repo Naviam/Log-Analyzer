@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Naviam.LogAnalyzer.UI.Web
+namespace Naviam.DataAnalyzer.UI.Web
 {
     public class FilterConfig
     {

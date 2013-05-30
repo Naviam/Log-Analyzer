@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace Naviam.LogAnalyzer.UI.Web
+namespace Naviam.DataAnalyzer.UI.Web
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
@@ -17,6 +17,13 @@ namespace Naviam.LogAnalyzer.UI.Web
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+
+            // Clears all previously registered view engines.
+            ViewEngines.Engines.Clear();
+
+            // Registers our Razor C# specific view engine.
+            // This can also be registered using dependency injection through the new IDependencyResolver interface.
+            ViewEngines.Engines.Add(new RazorViewEngine());
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

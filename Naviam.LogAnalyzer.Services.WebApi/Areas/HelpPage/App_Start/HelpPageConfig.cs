@@ -4,7 +4,7 @@ using System.Net.Http.Headers;
 using System.Web;
 using System.Web.Http;
 
-namespace Naviam.LogAnalyzer.Services.WebApi.Areas.HelpPage
+namespace Naviam.DataAnalyzer.Services.WebApi.Areas.HelpPage
 {
     /// <summary>
     /// Use this class to customize the Help Page.

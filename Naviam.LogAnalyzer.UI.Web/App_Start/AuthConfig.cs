@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Web.WebPages.OAuth;
-using Naviam.LogAnalyzer.UI.Web.Models;
+using Naviam.DataAnalyzer.UI.Web.Models;
 
-namespace Naviam.LogAnalyzer.UI.Web
+namespace Naviam.DataAnalyzer.UI.Web
 {
     public static class AuthConfig
     {

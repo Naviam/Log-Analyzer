@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace Naviam.LogAnalyzer.Services.WebApi
+namespace Naviam.DataAnalyzer.Services.WebApi
 {
     public static class WebApiConfig
     {

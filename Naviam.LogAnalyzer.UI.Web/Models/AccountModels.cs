@@ -6,7 +6,7 @@ using System.Data.Entity;
 using System.Globalization;
 using System.Web.Security;
 
-namespace Naviam.LogAnalyzer.UI.Web.Models
+namespace Naviam.DataAnalyzer.UI.Web.Models
 {
     public class UsersContext : DbContext
     {

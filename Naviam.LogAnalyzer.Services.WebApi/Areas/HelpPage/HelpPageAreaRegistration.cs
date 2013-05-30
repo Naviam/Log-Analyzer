@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace Naviam.LogAnalyzer.Services.WebApi.Areas.HelpPage
+namespace Naviam.DataAnalyzer.Services.WebApi.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {

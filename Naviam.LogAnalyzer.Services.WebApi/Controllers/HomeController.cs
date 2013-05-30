@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Naviam.LogAnalyzer.Services.WebApi.Controllers
+namespace Naviam.DataAnalyzer.Services.WebApi.Controllers
 {
     public class HomeController : Controller
     {

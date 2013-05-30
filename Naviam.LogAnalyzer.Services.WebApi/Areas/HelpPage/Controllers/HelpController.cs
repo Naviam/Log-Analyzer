@@ -1,9 +1,9 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using Naviam.LogAnalyzer.Services.WebApi.Areas.HelpPage.Models;
+using Naviam.DataAnalyzer.Services.WebApi.Areas.HelpPage.Models;
 
-namespace Naviam.LogAnalyzer.Services.WebApi.Areas.HelpPage.Controllers
+namespace Naviam.DataAnalyzer.Services.WebApi.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.
