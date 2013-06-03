@@ -1,0 +1,175 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Dashboard</h2>
+<div class="pull-left">
+    Frequency:
+    <select>
+        <option>1 min</option>
+        <option>2 min</option>
+        <option>3 min</option>
+        <option>4 min</option>
+        <option>5 min</option>
+    </select>
+    Show last:
+    <select>
+        <option>10</option>
+        <option>50</option>
+        <option>100</option>
+    </select>
+</div>
+<ul class="nav nav-pills pull-right">
+
+    <li>
+        <button type="button" class="btn btn-primary">Add Allert</button></li>
+    <li>
+        <button type="button" class="btn btn-primary">Add Filter</button></li>
+    <li class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" >Add DataSource<b class="caret"></b></button>
+        <ul class="dropdown-menu" role="menu">
+            <li ><a href="#addRestDataSourceModdalWindow" role="menuitem" data-toggle="modal">HTTP/REST</a></li>
+            <li><a href="#addRestDataSourceModdalWindow" role="menuitem" data-toggle="modal">SOAP</a></li>
+        </ul>
+    </li>
+</ul>
+<div id="addRestDataSourceModdalWindow" class="modal hide " aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>Add DataSource</h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <fieldset class="well the-fieldset">
+                <div class="control-group">
+                    <label class="control-label" for="itemName">Service</label>
+                    <div class="controls">
+                        <input class="input-medium focused" type="text" />
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="itemName">ID</label>
+                    <div class="controls">
+                        <select class="input-medium focused">
+                            <option>Int32</option>
+                            <option>String</option>
+                            <option>DateTime</option>
+                            <option>Bool</option>
+                        </select><button >Delete</button>
+                    </div>
+                </div>
+                <button>Add new field</button>
+            </fieldset>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal">Close</button>
+        <button class="btn btn-primary">Save changes</button>
+    </div>
+</div>
+<br />
+<br />
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#ScLogs" data-toggle="tab">ServiceChannel Errors</a></li>
+    <li><a href="#MyTwits" data-toggle="tab">My Twits</a></li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane active" id="ScLogs">
+        <table class="table table-condensed">
+            <tr>
+                <th>Date</th>
+                <th>User</th>
+                <th>Stack Trace</th>
+                <th>Error Code</th>
+                <th>Message</th>
+                <th>Severity</th>
+            </tr>
+            <tr class="warning">
+                <td>28.05.2013</td>
+                <td>John Smith</td>
+                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
+                <td>1000014</td>
+                <td>Retailer not found</td>
+                <td>High</td>
+            </tr>
+            <tr class="info">
+                <td>28.05.2013</td>
+                <td>John Smith</td>
+                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
+                <td>1000014</td>
+                <td>Retailer not found</td>
+                <td>Low</td>
+            </tr>
+            <tr class="error">
+                <td>28.05.2013</td>
+                <td>John Smith</td>
+                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
+                <td>1000014</td>
+                <td>Retailer not found</td>
+                <td>Critical</td>
+            </tr>
+            <tr class="success">
+                <td>28.05.2013</td>
+                <td>John Smith</td>
+                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
+                <td>1000014</td>
+                <td>Retailer not found</td>
+                <td>Info</td>
+            </tr>
+        </table>
+        Total Records: <b>4</b>
+    </div>
+    <div class="tab-pane" id="MyTwits">
+        <table class="table table-condensed">
+            <tr>
+                <th>Date</th>
+                <th>Nickname</th>
+                <th>Text</th>
+                <th>Age</th>
+                <th>Public</th>
+            </tr>
+            <tr>
+                <td>28.05.2013</td>
+                <td>John Smith</td>
+                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
+                <td>22</td>
+                <td>
+                    <input type="checkbox" disabled checked /></td>
+            </tr>
+            <tr>
+                <td>28.05.2013</td>
+                <td>John Smith</td>
+                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
+                <td>22</td>
+                <td>
+                    <input type="checkbox" disabled checked /></td>
+            </tr>
+            <tr>
+                <td>28.05.2013</td>
+                <td>John Smith</td>
+                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
+                <td>22</td>
+                <td>
+                    <input type="checkbox" disabled /></td>
+            </tr>
+            <tr>
+                <td>28.05.2013</td>
+                <td>John Smith</td>
+                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
+                <td>22</td>
+                <td>
+                    <input type="checkbox" disabled checked /></td>
+            </tr>
+            <tr>
+                <td>28.05.2013</td>
+                <td>John Smith</td>
+                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
+                <td>22</td>
+                <td>
+                    <input type="checkbox" disabled /></td>
+            </tr>
+        </table>
+        Total Records: <b>5</b>
+    </div>
+</div>

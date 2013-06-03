@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CD245B9-8B26-4614-B25F-77C702C8DE54}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Naviam.DataAnalyzer.UI.Controllers</RootNamespace>
+    <AssemblyName>Naviam.DataAnalyzer.UI.Controllers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HomeController.cs" />
+    <Compile Include="MemberController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Naviam.LogAnalyzer.Infrastructure\Naviam.DataAnalyzer.Infrastructure.csproj">
+      <Project>{ac1a6b51-b365-406c-9bdb-793cd2ef7d48}</Project>
+      <Name>Naviam.DataAnalyzer.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naviam.LogAnalyzer.Services.Contracts\Naviam.DataAnalyzer.Services.Contracts.csproj">
+      <Project>{f76461f4-e70c-454b-922a-81d6dec315c1}</Project>
+      <Name>Naviam.DataAnalyzer.Services.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naviam.LogAnalyzer.Services.Messages\Naviam.DataAnalyzer.Services.Messages.csproj">
+      <Project>{eb29bfb3-d796-48c7-8b84-eb188ce37f57}</Project>
+      <Name>Naviam.DataAnalyzer.Services.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naviam.LogAnalyzer.Services.Proxy\Naviam.DataAnalyzer.Services.Proxy.csproj">
+      <Project>{8ad1416d-d2d7-4107-b8b7-f76f4d83eb1a}</Project>
+      <Name>Naviam.DataAnalyzer.Services.Proxy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
