@@ -27,9 +27,9 @@
     <li>
         <button type="button" class="btn btn-primary">Add Filter</button></li>
     <li class="dropdown">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" >Add DataSource<b class="caret"></b></button>
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Add DataSource<b class="caret"></b></button>
         <ul class="dropdown-menu" role="menu">
-            <li ><a href="#addRestDataSourceModdalWindow" role="menuitem" data-toggle="modal">HTTP/REST</a></li>
+            <li><a href="#addRestDataSourceModdalWindow" role="menuitem" data-toggle="modal">HTTP/REST</a></li>
             <li><a href="#addRestDataSourceModdalWindow" role="menuitem" data-toggle="modal">SOAP</a></li>
         </ul>
     </li>
@@ -56,7 +56,8 @@
                             <option>String</option>
                             <option>DateTime</option>
                             <option>Bool</option>
-                        </select><button >Delete</button>
+                        </select>
+                        <button>Delete</button>
                     </div>
                 </div>
                 <button>Add new field</button>
@@ -76,46 +77,15 @@
 </ul>
 <div class="tab-content">
     <div class="tab-pane active" id="ScLogs">
-        <table class="table table-condensed">
+        <input type="text" id="dsId" />
+        <input type="button" value="Open Connection" id="btnOpnCon"/>
+        <table id="tbContent" class="table table-condensed">
             <tr>
-                <th>Date</th>
-                <th>User</th>
-                <th>Stack Trace</th>
-                <th>Error Code</th>
+                <th>Key</th>
                 <th>Message</th>
-                <th>Severity</th>
-            </tr>
-            <tr class="warning">
-                <td>28.05.2013</td>
-                <td>John Smith</td>
-                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
-                <td>1000014</td>
-                <td>Retailer not found</td>
-                <td>High</td>
-            </tr>
-            <tr class="info">
-                <td>28.05.2013</td>
-                <td>John Smith</td>
-                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
-                <td>1000014</td>
-                <td>Retailer not found</td>
-                <td>Low</td>
-            </tr>
-            <tr class="error">
-                <td>28.05.2013</td>
-                <td>John Smith</td>
-                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
-                <td>1000014</td>
-                <td>Retailer not found</td>
-                <td>Critical</td>
-            </tr>
-            <tr class="success">
-                <td>28.05.2013</td>
-                <td>John Smith</td>
-                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
-                <td>1000014</td>
-                <td>Retailer not found</td>
-                <td>Info</td>
+                <th>Exception</th>
+                <th>Level</th>
+                <th>Date</th>
             </tr>
         </table>
         Total Records: <b>4</b>
@@ -173,3 +143,24 @@
         Total Records: <b>5</b>
     </div>
 </div>
+@section Scripts
+{
+    @Scripts.Render("http://code.jquery.com/jquery-1.7.min.js")
+    @Scripts.Render("~/Scripts/jquery.signalR-1.1.2.min.js")
+   <script type="text/javascript">
+       $(document).ready(function () {
+           $("#btnOpnCon").click(function () {
+               var connection = $.connection('/datasource', "dataSourceId=" + $("#dsId").val(), true);
+              
+               connection.start().done(function () {
+                   connection.received(function (data) {
+                       $('#tbContent tr:last').after('<tr><td>'+data.Key+'</td><td>'+data.Message+'</td><td>'+data.Exception+'</td><td>'+data.Level+'</td><td>'+data.Date+'</td></tr>');
+                   });
+               });
+               
+              
+
+           });
+       });
+    </script>
+}

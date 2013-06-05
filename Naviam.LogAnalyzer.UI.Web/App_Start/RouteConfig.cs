@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Naviam.DataAnalyzer.UI.Controllers;
 
 namespace Naviam.DataAnalyzer.UI.Web
 {
@@ -12,6 +13,8 @@ namespace Naviam.DataAnalyzer.UI.Web
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            RouteTable.Routes.MapConnection<DatasourceConnection>("datasource", "/datasource");
 
             routes.MapRoute(
                 name: "Default",

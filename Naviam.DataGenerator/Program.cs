@@ -13,10 +13,10 @@
         {
             int sleep;
             int.TryParse(ConfigurationManager.AppSettings["sleep"] ?? "1000", out sleep);
-            
+            var url = string.Concat(ConfigurationManager.AppSettings["url_host"],"?userId=", "user1","&datasourceId=", "123");
             while (true)
             {
-                PostData(ConfigurationManager.AppSettings["url_host"] ?? string.Empty);
+                PostData(url);
                 Thread.Sleep(sleep);
             }
         }

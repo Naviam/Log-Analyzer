@@ -6,6 +6,8 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Naviam.DataAnalyzer.UI.Controllers;
+using Microsoft.AspNet.SignalR.Hosting;
 
 namespace Naviam.DataAnalyzer.UI.Web
 {
@@ -30,6 +32,8 @@ namespace Naviam.DataAnalyzer.UI.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+
+            
         }
     }
 }
