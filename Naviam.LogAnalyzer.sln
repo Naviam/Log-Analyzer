@@ -44,6 +44,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Model",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataGenerator", "Naviam.DataGenerator\Naviam.DataGenerator.csproj", "{7D54FF56-94C5-4518-8057-422F4324009E}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Naviam.DataAnalyzer.Modeling", "Naviam.DataAnalyzer.Modeling\Naviam.DataAnalyzer.Modeling.modelproj", "{B7586FD1-D357-4F1F-9ACB-9F665233EE5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -98,6 +100,10 @@ Global
 		{7D54FF56-94C5-4518-8057-422F4324009E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D54FF56-94C5-4518-8057-422F4324009E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D54FF56-94C5-4518-8057-422F4324009E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7586FD1-D357-4F1F-9ACB-9F665233EE5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7586FD1-D357-4F1F-9ACB-9F665233EE5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7586FD1-D357-4F1F-9ACB-9F665233EE5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7586FD1-D357-4F1F-9ACB-9F665233EE5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,5 +121,6 @@ Global
 		{7D54FF56-94C5-4518-8057-422F4324009E} = {1EA214BD-4687-4418-AD23-5F2D0D4A57CF}
 		{C1EE12E5-BE7A-415A-9097-872E962B4FAC} = {AF875A4C-8E32-49F7-9E0B-530DC5B15DC0}
 		{13571DCA-D03A-4E33-96F5-022EE41139FD} = {63114B6C-106B-4658-85B2-B6E899246233}
+		{B7586FD1-D357-4F1F-9ACB-9F665233EE5C} = {63114B6C-106B-4658-85B2-B6E899246233}
 	EndGlobalSection
 EndGlobal
