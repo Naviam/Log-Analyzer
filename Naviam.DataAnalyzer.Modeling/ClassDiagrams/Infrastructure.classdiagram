@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="18674b1c-09ca-4261-a0e3-788cc59608b9" name="ClassDiagram" linkedPackageId="f7f303a4-352b-4d85-9746-95a1e65649f5" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="ab64ee93-88e4-41fb-9461-5496e8c94403" name="IFiltersRepository" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7441df15-9121-4499-8718-6ddd655c83b9" />
+        <ownedOperations>
+          <operation Id="da673c49-bbff-475e-8b39-eb7ed6fa7c2c" name="AddDataSourceFilter" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e7483cc8-a92f-4667-ba02-37681d9a97be" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7cdefa4a-fb15-4564-9ef6-7b16c1ec9963" name="dataSourceId" direction="In">
+                  <elementDefinition Id="ee0039fb-812c-4858-8a1f-4b538a82f08e" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e878b6f3-1e0c-4972-b233-31d1c37e77fd" name="filter" direction="In">
+                  <elementDefinition Id="11682e4a-ebc0-4615-8ffd-c914a64f9723" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f465fc8a-c5ec-4f61-a26c-b58afaacd714" name="RemoveDataSourceFilter" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1389a10c-5eba-422f-8373-b2b816116be1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e5d275ee-5e12-4d9c-9c54-f498d7a8ff67" name="dataSourceId" direction="In">
+                  <elementDefinition Id="d0b6af76-9a45-4140-b849-8210b696a29d" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d7d904f2-9657-4e9a-9df7-645b58d02e57" name="filterId" direction="In">
+                  <elementDefinition Id="db045eb0-2cab-4870-84e6-28159101db8a" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="cc094e80-0038-44d1-b535-7ec2c90ba244" name="ISessionStorage" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f46a545e-a601-4c9b-ba96-8bdf11fd1c84" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="6e330384-738d-4d98-ae5e-23e1258e68a3" name="ILogger" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="10ac7156-2c1a-4213-90d6-0757b1cc2466" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="1dc44f59-e6a7-4d7b-b63b-b441c7a69e95" name="IEmailService" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="578a3c53-8f00-4d07-a9b7-638e25baf324" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="dc04edd4-27f8-433f-8f76-70d36e907afa" name="IFileStorage" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="83d6bf44-61cf-4a73-bb28-dbf7ea2968cf" />
+        <ownedOperations>
+          <operation Id="d8f1f538-4924-4de9-97eb-dc3a25aa0215" name="MapPath" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fe1d923a-95cd-46b6-b8de-a9d3f4b901bd" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="03504615-d06e-488c-9291-0a03f443f144" name="path" direction="In" isUnique="false">
+                  <elementDefinition Id="7936b6f8-a292-4f7b-95ef-390471c3be8b" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a06d6f24-81eb-4538-8f8c-7b6c93f03dee" name="Save" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fbf2cd5e-8d24-44f1-948f-e2257c414bb0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4707ed9d-5080-46d1-86b5-42d3cce2602e" name="path" direction="In" isUnique="false">
+                  <elementDefinition Id="d5640ca5-1c9b-4906-b849-d00b2792baad" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3dd2b9f8-7a37-4c92-8cb9-9ef5fdfdda91" name="Load" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="404f498f-50e2-406d-8b6b-a0ecbbd7be4c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="09426080-c245-4e67-b92b-bb11e6e1dad9" name="path" direction="In" isUnique="false">
+                  <elementDefinition Id="2bddac52-a6ed-48f8-acfe-0480346f30fc" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a44a50d7-e061-4ecd-8955-c19f00e69954" name="Delete" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="be2c230a-7fe1-4746-bb4f-d0e42732638d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="92d24eeb-76d2-4cce-b23e-29165eed1cf9" name="path" direction="In" isUnique="false">
+                  <elementDefinition Id="e9c3f28c-d193-41a4-aa67-f0753bd2d178" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="54f95c5a-668a-4dbb-ade1-2d7b522b713a" name="GetPath" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="249557ac-da0e-4c76-a21e-a906fbe4a477" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ab9fcd83-981d-4dd3-b6e6-0b2f54310e97" name="fileName" direction="In" isUnique="false">
+                  <elementDefinition Id="b85cf763-036b-4b73-88d5-902c92756b1c" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="f501621c-8d08-499e-b0a3-37127944f983" name="ICookieStorage" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="936b24c1-75b5-4f4f-817a-8e2081b6af90" />
+        <ownedOperations>
+          <operation Id="f761b0fa-08ab-43ea-a410-01d532ebf847" name="Save" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3b60883b-3d37-44fe-997b-61664f4d0f36" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6bb41f7f-6c29-4c94-af0c-0ad35eef5cd8" name="key" direction="In">
+                  <elementDefinition Id="cb326a43-16ae-4f07-8de1-6920f937dabc" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="80316c86-f5ba-4593-b42a-c5aab3a551aa" name="value" direction="In">
+                  <elementDefinition Id="d50b0904-f83b-4330-b990-9e5cca6bf161" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9c6c2ff2-179d-4aa0-bb8a-24a0f47abdb9" name="expires" direction="In">
+                  <elementDefinition Id="6de19971-e8af-4408-bbef-87e3fb65121a" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1de8f230-36d6-4a91-a153-743fd0717763" name="SaveCollection" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c5236998-ebf5-4804-9b60-d8ff1b9ae80c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="52018b56-2d8c-4a01-a2af-3abaf4a76742" name="key" direction="In">
+                  <elementDefinition Id="d1f4ab54-a3da-4ac0-855b-c88da6118d7c" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e2fdc65d-8ebc-4859-b9fa-7378196fc4cb" name="values" direction="In">
+                  <elementDefinition Id="a38c8ae6-9eb9-48dc-a8ac-579dbc39c2d4" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f617881a-b2fb-4298-b69b-784e85faf4a6" name="expires" direction="In">
+                  <elementDefinition Id="def17e7e-edae-4b3f-9a20-75c44edf74b8" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="443156d2-4542-4f96-8204-92564adb3a4d" name="RetrieveCollection" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="30a420d4-3b1e-49fb-97d6-1b6670151226" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8f5287e2-b58e-4d03-b095-db702c17426c" name="key" direction="In" isUnique="false">
+                  <elementDefinition Id="80156e89-7128-4a3d-bb0b-a3628531f70d" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="dad2d1ef-63c0-4b32-b5bb-e64d19278364" name="Retrieve" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1a5739eb-8095-400a-ba02-1559d3bebaa6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="089eecb0-a0e5-4597-ad75-86a59e471891" name="key" direction="In" isUnique="false">
+                  <elementDefinition Id="1a1dac43-4e8a-4d85-860f-16d2a693490f" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="cff0f219-ec5b-443f-9108-346c1d623abf" name="IApplicationSettings" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="df747581-64f9-4b12-89db-cf8d4a83addf" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="dd7eab32-5e13-4060-bf46-4befb13350a6" name="IFormsAuthentication" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7e53be07-bf70-4597-8d1d-750e90f877cc" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a7190577-ee2f-43c3-879b-22a66da4bbba" name="AmazonS3Storage" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6cef5c44-4c53-485b-87dc-37f0d358f141" />
+        <suppliersInternal>
+          <interfaceRealization Id="b69047c1-7de9-4c04-bf19-ba10774f7b91">
+            <interfaceMoniker Id="dc04edd4-27f8-433f-8f76-70d36e907afa" LastKnownName="IFileStorage" />
+            <elementDefinition Id="ecc79f4a-1362-4ecd-a516-c172ed253d67" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="e8f9875f-6a04-462e-87e4-a6c7f3f1e1fb" name="MapPath" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c8fea74d-7401-4da9-aa08-3a080a71f387" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6e540ce6-36f0-4e56-a878-c5f55f978ff1" name="path" direction="In" isUnique="false">
+                  <elementDefinition Id="6ff61174-26c8-44c8-80d3-b07a169f9e46" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="9d0ca667-27aa-4cee-9618-858e80812d3b" name="Save" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="357e594e-02e7-46c2-869e-18b6d2ee5fbb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="57f2e871-66ab-4e29-9794-a81ac63d556a" name="fileName" direction="In" isUnique="false">
+                  <elementDefinition Id="1c9c8e8c-3e53-4d02-9760-25446be8a4a4" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f2a3cfb2-82ec-45fc-8d48-43c92f2480a8" name="Load" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="edc77728-a727-4549-ac3f-c02b7f959cb3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b89a040a-5fc2-4ebf-a2bc-a139d8f3c770" name="path" direction="In" isUnique="false">
+                  <elementDefinition Id="162d432a-5ce1-4893-ba76-a54ee807c9a2" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="bffd1e29-dcd9-46b4-a028-21023b6c2ac7" name="Delete" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="22eedc96-7b46-47c3-8e53-7d81cdb7ba2b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a214882e-99b7-47c6-967f-11af4f2aa8e6" name="path" direction="In" isUnique="false">
+                  <elementDefinition Id="b29828e7-1f79-40cf-b9a3-289c475aeecd" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1bae98c1-dd8e-4040-a263-6532c2de4d25" name="GetPath" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d466e471-1350-4dd5-bf58-6faa9944bcc3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6b1d7393-03e9-454b-a4c6-a9038160ed2c" name="fileName" direction="In" isUnique="false">
+                  <elementDefinition Id="a2e9f8c7-04ad-4a09-a462-0d53a411eb3b" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b66bcc38-d613-4b0d-b573-b1e0a7bad80a" name="CookieStorageService" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f3b891c9-e37b-41c5-bff9-695502fb8f76" />
+        <suppliersInternal>
+          <interfaceRealization Id="6439feb1-b07a-4b83-b74b-859dc1c03ae5">
+            <interfaceMoniker Id="f501621c-8d08-499e-b0a3-37127944f983" LastKnownName="ICookieStorage" />
+            <elementDefinition Id="bd8c156d-1667-4805-964a-f949ef2fe6aa" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="a150ccba-065c-49e0-8f7a-f3b7b009ad2e" name="Save" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="55428f11-5d9a-4fd2-bfc4-38f5b801f882" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f4d5c04c-77d2-4b07-9934-9c684eb4ad9a" name="key" direction="In">
+                  <elementDefinition Id="d85170bc-e7a0-4d89-8ed3-c85d5a4c7a2f" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8589acfd-df2c-42d3-813d-e093e20fd775" name="value" direction="In">
+                  <elementDefinition Id="382cd903-1e52-49ee-9326-5df145de2747" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="35eb889b-c263-41b8-8aaa-43dbac86a498" name="expires" direction="In">
+                  <elementDefinition Id="a453deb7-97dc-4830-a148-88d5906901b0" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="4481e7e2-6e86-4f89-aae4-5a823649daa5" name="SaveCollection" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ad638304-8b5d-42ba-bc8d-e81afe6ced68" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="952f42d1-044e-4b86-b3ae-07f67c22c586" name="key" direction="In">
+                  <elementDefinition Id="affcd0de-ea6b-4db9-b17c-731a565fc520" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="51d8e2e7-7850-4a89-89e4-60cd384b58c7" name="values" direction="In">
+                  <elementDefinition Id="988dd4ce-5933-4633-aeee-a0b45e0f206c" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ca12f316-e9c8-490b-9915-00ed716a7798" name="expires" direction="In">
+                  <elementDefinition Id="b38aca0c-ce77-4638-bdbe-03cff031c45c" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="64c1c370-11a8-4166-a678-8fd929aebbbb" name="RetrieveCollection" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="600f4422-3f5a-4e8a-8a59-b311990f3d0c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="45e6f6af-837d-4930-bf1e-dfb25b02c770" name="key" direction="In" isUnique="false">
+                  <elementDefinition Id="5d8e1e28-d1c4-4197-91a0-88d05bd9a71f" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f51120d6-eada-41ba-b0bb-c6b83451f5f9" name="Retrieve" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="298ebae3-0505-4353-b1e9-1c0b82367432" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d82dd7ba-8640-4e93-83d8-530e044e69f3" name="key" direction="In" isUnique="false">
+                  <elementDefinition Id="45bfd19b-953c-4c13-91e1-2a9041494afd" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="f7f303a4-352b-4d85-9746-95a1e65649f5" name="Naviam.DataAnalyzer.Modeling">
+    <elementDefinition Id="ed62779c-a443-4c58-9877-0bbce7677c90" />
+    <profileInstances>
+      <packageHasProfileInstances Id="672b20e4-17a1-403b-8dc8-3efcd5c1e2b8">
+        <profileInstance Id="748c43cd-efa4-41e1-80ed-1ac377e22aed" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="a604e6d2-0037-4daa-9d38-2c28c36b1cdc">
+        <profileInstance Id="39eca1c7-a583-4b16-912a-bc48027b7b14" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

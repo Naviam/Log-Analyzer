@@ -22,10 +22,32 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="ClassDiagrams\DataSources.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ClassDiagrams\DataSources.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClassDiagrams\DataSources.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ClassDiagrams\Infrastructure.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ClassDiagrams\Infrastructure.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClassDiagrams\Infrastructure.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="UseCases.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCases.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCases.usecasediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\Naviam.DataAnalyzer.Modeling.uml">
       <SubType>Content</SubType>
     </Content>
+    <Folder Include="ClassDiagrams" />
   </ItemGroup>
   <ItemGroup>
     <Validate Include="Architecture.layerdiagram">
