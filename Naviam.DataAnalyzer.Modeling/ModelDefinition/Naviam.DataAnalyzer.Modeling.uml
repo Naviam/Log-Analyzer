@@ -1,8 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="ed62779c-a443-4c58-9877-0bbce7677c90"
   name="Naviam.DataAnalyzer.Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="fc30fc44-e3ed-41c6-abbf-b3ccf0fe204d">
+      <body>/api/datasources/123
+</body>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -18,80 +25,6 @@
     </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
-    <packageHasNamedElement>
-      <Interface
-        Id="feac3be5-d14f-48d2-8d6d-dfe7651c018e"
-        name="IDataSourcesRepository"
-        isAbstract="false"
-        isLeaf="false">
-        <ownedOperations>
-          <operation
-            Id="59e2f2c9-4496-483b-9779-9da2c4ab794a"
-            name="AddDataSource"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="1c98fa33-b7bb-4eef-9be2-e2cdda03ffc1"
-                  name="user"
-                  direction="In" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="bf29823d-5f7c-4843-96d7-17383de3d1d9"
-                  name="dataSource"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="e364b6cf-4ce9-4913-8f00-7235ce2a13df"
-            name="GetDataSource"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="b083eb52-89b3-4503-b11a-07ade605570a"
-            name="RemoveDataSource"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="350ba4c4-09a3-4315-96fd-b191415257a0"
-                  name="user"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="93969e2d-f09b-48f2-9f36-04a0baa6b257"
-                  name="dataSourceId"
-                  direction="In" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="a2471b09-a2ec-4aad-b825-8433d4c8eb68"
-            name="GetUserDataSources"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false" />
-        </ownedOperations>
-      </Interface>
-    </packageHasNamedElement>
     <packageHasNamedElement>
       <Interface
         Id="7441df15-9121-4499-8718-6ddd655c83b9"
@@ -613,10 +546,736 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <Interface
-        Id="28fce593-b22a-464f-baeb-ead2978c6c56"
+        Id="34f05d64-1d0c-4bdd-ab33-b6fb00c9e8e8"
+        name="IDataSourcesRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="a6687585-f0a5-4a05-b471-087862179fa6"
+            name="AddDataSource"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ee09eb9c-d3bf-4f07-ac42-be1d603a27e3"
+                  name="user"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="021566f0-1784-4c42-9445-04d397350e5e"
+                  name="dataSource"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6ea81899-7ab0-4d24-918a-24a647549104"
+            name="GetDataSource"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="eecdf7da-1a1c-47a9-9e7b-13c0486b0e64"
+                  name="dataSourceId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1be17396-b9b2-4a0f-ac89-30b595edbe92"
+            name="RemoveDataSource"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="81e949c3-57cb-4b7d-80ba-6c5ced91c49a"
+                  name="user"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3215ad42-6cdc-4190-9289-7fb2ce8bcfcc"
+                  name="dataSourceId"
+                  direction="In" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3c9ee0c5-766e-4f6c-8b84-c3ec46968873"
+            name="GetUserDataSources"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bc01bcce-26f7-46bb-a3ad-3f4c7ff64fe8"
+                  name="user"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="e447b3f4-2daf-4686-ae60-6e63000fbdb9"
         name="IUsersRepository"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="e8286393-85e7-4a07-aac3-39560b2c0eeb"
+            name="AddUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6f931c4c-1466-42a3-9d71-b7d9b6c7ebc2"
+        name="IAccountsRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="125f0efc-5d77-4a8d-ba8e-c66f2d54754b"
+            name="AddAccount"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="04f3b1ec-ca30-44d4-a40e-124db9ad78a0"
+            name="DisableAccount"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a0557510-79d0-4f0a-a6a7-e715e5a2fc1b"
+            name="UpdateAccount"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2e31aa01-200e-4b60-a160-fab19b0e5062"
+            name="AddUserToAccount"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="787ec25a-5a29-4cab-85f0-3e012eb5c659"
+            name="RemoveUserFromAccount"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2bbee5b4-5e0a-4401-b298-4eab12ad044d"
+        name="DataSource"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="b3293708-8047-49c7-b4cd-edad6e6810e9">
+            <interfaceMoniker
+              Id="df0dee3f-6914-42ee-b1df-3c834d9054c8"
+              LastKnownName="IHub"
+              LastKnownLocation="Naviam.DataAnalyzer.Modeling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="26b7acb0-320d-403b-a173-36beb750b56b"
+            isSubstitutable="false">
+            <classMoniker
+              Id="6a636bcb-f445-4f01-860b-499c284a6e59"
+              LastKnownName="DataSourceBase"
+              LastKnownLocation="Naviam.DataAnalyzer.Modeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="84a2e64e-a525-4e47-865a-ee20b26cd377"
+            name="RequestParameters"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="7411dbb2-5daf-4337-9a15-830584231921"
+            name="ResponseParameters"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="6f26b3a7-bec4-44ba-8e4a-e72579bd45e4"
+            name="Credentials"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="dadf5b01-8259-4259-906f-616a57d49d55"
+            name="Endpoint"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="4668d7fa-d959-4660-b65c-de16bca225d5"
+            name="Mapping"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="075063e8-b60e-4055-90ae-7d8e5ce52de8"
+            name="AddRequestParameter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0dfeee80-c032-44ee-b66f-0fe0fff96740"
+            name="RemoveRequestParameter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3a674da6-d0c9-4d95-9192-8bf014f968b3"
+            name="AddResponseParameter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f30ff5d5-7561-430c-a193-b0d203350652"
+            name="RemoveResponseParameter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="106d4d8a-031d-4983-8da7-e26ebbf9e2ee"
+            name="RegisterSubscriber"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a6e58b82-0077-4478-8f2f-9e029c729b94"
+            name="UnregisterSubscriber"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f1fc39f0-1c44-47f8-8008-b511b486fd95"
+            name="NotifySubscribers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="43dcc91e-d003-4615-9100-503c5b788ec5"
+        name="Account"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="df5df63f-0d80-42d9-85f5-60fc47548a9b"
+            name="Users"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="cf375795-d358-40b7-93cd-66063dc98718"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="3ee577f8-6e4c-43fb-9639-fc5d047972e8"
+            name="DataSources"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6a636bcb-f445-4f01-860b-499c284a6e59"
+        name="DataSourceBase"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="3ac262e2-ff01-4b6e-9d73-ed1e1447afdb"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="089493e3-3fd2-4527-b8ba-72e29462c2a4"
+            name="Filters"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="74fffa24-2830-4011-b25e-a437bc851bf5"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="19ff4ced-4aae-4bc6-81d3-6ae676ee42cf"
+            name="Account"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="df0dee3f-6914-42ee-b1df-3c834d9054c8"
+        name="IHub"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="a4e1c5be-c684-4b0d-af68-6bb9e7cf2fda"
+            name="ActiveConnections"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributes>
+        <ownedOperations>
+          <operation
+            Id="c80ba251-eac4-438b-9ecb-91d891e6fc58"
+            name="RegisterSubscriber"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="9d63a841-8612-4fe3-89c2-d651a02114dc"
+            name="UnregisterSubscriber"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7f6a015c-b0e1-4bdf-a60b-3e84b9ede722"
+            name="NotifySubscribers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6f8de3d4-bc0c-46de-87b6-093c5325ac20"
+        name="User"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="cfab0ccf-5c8a-448c-8d75-99ded29817e6">
+            <interfaceMoniker
+              Id="35fd93fd-b17d-4e2b-bcee-4b5a4de2a5b2"
+              LastKnownName="ISubscriber"
+              LastKnownLocation="Naviam.DataAnalyzer.Modeling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="b50c5268-a1db-4881-ba1d-e1ecb5bf1b20"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="acb5578c-ea91-44d0-af0e-d7b167ddfb61"
+            name="Email"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="24fae972-4c76-407e-9b6d-6eaa863585e9"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d151d395-533d-46b6-adfc-0d3d4210ab47"
+        name="DataSourceService"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="1426d8ec-f870-42a6-8f54-946ff5f030a7">
+            <interfaceMoniker
+              Id="24786f1d-7add-4289-ad17-22383a9d83a5"
+              LastKnownName="IDataSourceService"
+              LastKnownLocation="Naviam.DataAnalyzer.Modeling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="81989d5d-e827-429d-bb97-b12449bf748e"
+            name="Receive"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f1333edc-edf3-4d4f-905c-cdc39609e0bb"
+                  name="dataSourceId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="feaec3c8-6388-4f73-885e-c01a9d46c86a"
+                  name="incomingData"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a9237ce3-ec08-4ca3-9d36-81ef709a9e04"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bc130fbf-b05e-4382-88e5-3940ad5a8c84"
+                  name="accountId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cfa48404-760c-4af7-924f-fd47d93f067c"
+                  name="dataSource"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="eb9401b6-2388-492b-b896-9fd2ebb2fad2"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="28a7a960-0f1d-4cbd-9c08-95927c04fbe3"
+                  name="accountId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3367590e-a085-4f8d-b2c5-6de3104e0229"
+                  name="dataSource"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="825d7d4c-5953-4a04-ab25-b88fbdd019e7"
+            name="Subscribe"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3c686cf8-1dce-4220-832a-82979f0822b2"
+        name="Condition"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="24786f1d-7add-4289-ad17-22383a9d83a5"
+        name="IDataSourceService"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="e5e79be5-4fb8-43d9-87a4-37668a079467"
+            name="Receive"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="af5b8b3d-7753-4f88-a613-4db814eb3b0f"
+                  name="dataSourceId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d471130b-710e-4c84-b668-73e3d311c6f2"
+                  name="incomingData"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f7919af8-8756-40d0-b1db-ec4d9b52b7c0"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3b54e5ab-1269-4e6f-82f7-041e3569ace0"
+                  name="accountId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3fabb59f-0c8a-4814-a58f-887b2d377b00"
+                  name="dataSource"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="57df1ee8-93c2-4d7a-af78-b684b723ad33"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b1688c85-ff19-48b7-a1cc-bf345bd0fd76"
+                  name="accountId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="200021b0-7a9e-4147-bd2b-bb588194a49d"
+                  name="dataSource"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="541fee74-447f-463e-856d-f2aa2f91b9d1"
+            name="Subscribe"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="206432ba-e5e8-47ff-81e6-964b99e91730"
+        name="Hub"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="35fd93fd-b17d-4e2b-bcee-4b5a4de2a5b2"
+        name="ISubscriber"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="8299bd77-6b19-48f4-b77e-a9d781fdbe59"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
