@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="ed62779c-a443-4c58-9877-0bbce7677c90"
   name="Naviam.DataAnalyzer.Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -17,28 +17,503 @@
         name="StandardProfileL3" />
     </packageHasProfileInstances>
   </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="feac3be5-d14f-48d2-8d6d-dfe7651c018e"
+        name="IDataSourcesRepository"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="7441df15-9121-4499-8718-6ddd655c83b9"
+        name="IFiltersRepository"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="f46a545e-a601-4c9b-ba96-8bdf11fd1c84"
+        name="ISessionStorage"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="10ac7156-2c1a-4213-90d6-0757b1cc2466"
+        name="ILogger"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="578a3c53-8f00-4d07-a9b7-638e25baf324"
+        name="IEmailService"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="83d6bf44-61cf-4a73-bb28-dbf7ea2968cf"
+        name="IFileStorage"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="fe1d923a-95cd-46b6-b8de-a9d3f4b901bd"
+            name="MapPath"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7936b6f8-a292-4f7b-95ef-390471c3be8b"
+                  name="path"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fbf2cd5e-8d24-44f1-948f-e2257c414bb0"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d5640ca5-1c9b-4906-b849-d00b2792baad"
+                  name="path"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="404f498f-50e2-406d-8b6b-a0ecbbd7be4c"
+            name="Load"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2bddac52-a6ed-48f8-acfe-0480346f30fc"
+                  name="path"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="be2c230a-7fe1-4746-bb4f-d0e42732638d"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e9c3f28c-d193-41a4-aa67-f0753bd2d178"
+                  name="path"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="249557ac-da0e-4c76-a21e-a906fbe4a477"
+            name="GetPath"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b85cf763-036b-4b73-88d5-902c92756b1c"
+                  name="fileName"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="936b24c1-75b5-4f4f-817a-8e2081b6af90"
+        name="ICookieStorage"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="3b60883b-3d37-44fe-997b-61664f4d0f36"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cb326a43-16ae-4f07-8de1-6920f937dabc"
+                  name="key"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d50b0904-f83b-4330-b990-9e5cca6bf161"
+                  name="value"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6de19971-e8af-4408-bbef-87e3fb65121a"
+                  name="expires"
+                  direction="In" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c5236998-ebf5-4804-9b60-d8ff1b9ae80c"
+            name="SaveCollection"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d1f4ab54-a3da-4ac0-855b-c88da6118d7c"
+                  name="key"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a38c8ae6-9eb9-48dc-a8ac-579dbc39c2d4"
+                  name="values"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="def17e7e-edae-4b3f-9a20-75c44edf74b8"
+                  name="expires"
+                  direction="In" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="30a420d4-3b1e-49fb-97d6-1b6670151226"
+            name="RetrieveCollection"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="80156e89-7128-4a3d-bb0b-a3628531f70d"
+                  name="key"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1a5739eb-8095-400a-ba02-1559d3bebaa6"
+            name="Retrieve"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1a1dac43-4e8a-4d85-860f-16d2a693490f"
+                  name="key"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="df747581-64f9-4b12-89db-cf8d4a83addf"
+        name="IApplicationSettings"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="7e53be07-bf70-4597-8d1d-750e90f877cc"
+        name="IFormsAuthentication"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6cef5c44-4c53-485b-87dc-37f0d358f141"
+        name="AmazonS3Storage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="ecc79f4a-1362-4ecd-a516-c172ed253d67">
+            <interfaceMoniker
+              Id="83d6bf44-61cf-4a73-bb28-dbf7ea2968cf"
+              LastKnownName="IFileStorage"
+              LastKnownLocation="Naviam.DataAnalyzer.Modeling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c8fea74d-7401-4da9-aa08-3a080a71f387"
+            name="MapPath"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6ff61174-26c8-44c8-80d3-b07a169f9e46"
+                  name="path"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="357e594e-02e7-46c2-869e-18b6d2ee5fbb"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1c9c8e8c-3e53-4d02-9760-25446be8a4a4"
+                  name="fileName"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="edc77728-a727-4549-ac3f-c02b7f959cb3"
+            name="Load"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="162d432a-5ce1-4893-ba76-a54ee807c9a2"
+                  name="path"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="22eedc96-7b46-47c3-8e53-7d81cdb7ba2b"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b29828e7-1f79-40cf-b9a3-289c475aeecd"
+                  name="path"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d466e471-1350-4dd5-bf58-6faa9944bcc3"
+            name="GetPath"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a2e9f8c7-04ad-4a09-a462-0d53a411eb3b"
+                  name="fileName"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f3b891c9-e37b-41c5-bff9-695502fb8f76"
+        name="CookieStorageService"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="bd8c156d-1667-4805-964a-f949ef2fe6aa">
+            <interfaceMoniker
+              Id="936b24c1-75b5-4f4f-817a-8e2081b6af90"
+              LastKnownName="ICookieStorage"
+              LastKnownLocation="Naviam.DataAnalyzer.Modeling.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="55428f11-5d9a-4fd2-bfc4-38f5b801f882"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d85170bc-e7a0-4d89-8ed3-c85d5a4c7a2f"
+                  name="key"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="382cd903-1e52-49ee-9326-5df145de2747"
+                  name="value"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a453deb7-97dc-4830-a148-88d5906901b0"
+                  name="expires"
+                  direction="In" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ad638304-8b5d-42ba-bc8d-e81afe6ced68"
+            name="SaveCollection"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="affcd0de-ea6b-4db9-b17c-731a565fc520"
+                  name="key"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="988dd4ce-5933-4633-aeee-a0b45e0f206c"
+                  name="values"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b38aca0c-ce77-4638-bdbe-03cff031c45c"
+                  name="expires"
+                  direction="In" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="600f4422-3f5a-4e8a-8a59-b311990f3d0c"
+            name="RetrieveCollection"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5d8e1e28-d1c4-4197-91a0-88d05bd9a71f"
+                  name="key"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="298ebae3-0505-4353-b1e9-1c0b82367432"
+            name="Retrieve"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="45bfd19b-953c-4c13-91e1-2a9041494afd"
+                  name="key"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
     name="Integer"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
     name="Boolean"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
     name="String"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
     name="UnlimitedNatural"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
 </modelStoreModel>
