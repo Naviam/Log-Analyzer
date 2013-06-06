@@ -4,11 +4,81 @@
     <logicalClassDesignerModelHasTypes>
       <Interface Id="127a14f3-941c-47e4-ae21-94c9f7fc7f99" name="IDataSourcesRepository" isAbstract="false" isLeaf="false">
         <elementDefinition Id="feac3be5-d14f-48d2-8d6d-dfe7651c018e" />
+        <ownedOperations>
+          <operation Id="eff59724-63c2-469a-9c2a-2f9800525a5c" name="AddDataSource" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="59e2f2c9-4496-483b-9779-9da2c4ab794a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="59b2c036-8860-4792-bcc8-980b62874687" name="user" direction="In">
+                  <elementDefinition Id="1c98fa33-b7bb-4eef-9be2-e2cdda03ffc1" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ea3705e1-93f5-48ec-8a98-7140ab68a843" name="dataSource" direction="In" isUnique="false">
+                  <elementDefinition Id="bf29823d-5f7c-4843-96d7-17383de3d1d9" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="cf40f4d7-c93e-4392-b80b-b4435f172624" name="GetDataSource" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e364b6cf-4ce9-4913-8f00-7235ce2a13df" />
+          </operation>
+          <operation Id="076b27a7-530c-4e79-bd1a-b53555250b2b" name="RemoveDataSource" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b083eb52-89b3-4503-b11a-07ade605570a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b2a0e35c-0ad0-479c-8a78-70b0fefce16c" name="user" direction="In" isUnique="false">
+                  <elementDefinition Id="350ba4c4-09a3-4315-96fd-b191415257a0" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7a3f2c9f-fd4a-4cb6-bf41-b7a3984e1b16" name="dataSourceId" direction="In">
+                  <elementDefinition Id="93969e2d-f09b-48f2-9f36-04a0baa6b257" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b8cc799e-939b-4bd8-a93f-6c3cbc841374" name="GetUserDataSources" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a2471b09-a2ec-4aad-b825-8433d4c8eb68" />
+          </operation>
+        </ownedOperations>
       </Interface>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <Interface Id="ab64ee93-88e4-41fb-9461-5496e8c94403" name="IFiltersRepository" isAbstract="false" isLeaf="false">
         <elementDefinition Id="7441df15-9121-4499-8718-6ddd655c83b9" />
+        <ownedOperations>
+          <operation Id="da673c49-bbff-475e-8b39-eb7ed6fa7c2c" name="AddDataSourceFilter" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e7483cc8-a92f-4667-ba02-37681d9a97be" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7cdefa4a-fb15-4564-9ef6-7b16c1ec9963" name="dataSourceId" direction="In">
+                  <elementDefinition Id="ee0039fb-812c-4858-8a1f-4b538a82f08e" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e878b6f3-1e0c-4972-b233-31d1c37e77fd" name="filter" direction="In">
+                  <elementDefinition Id="11682e4a-ebc0-4615-8ffd-c914a64f9723" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f465fc8a-c5ec-4f61-a26c-b58afaacd714" name="RemoveDataSourceFilter" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1389a10c-5eba-422f-8373-b2b816116be1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e5d275ee-5e12-4d9c-9c54-f498d7a8ff67" name="dataSourceId" direction="In">
+                  <elementDefinition Id="d0b6af76-9a45-4140-b849-8210b696a29d" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d7d904f2-9657-4e9a-9df7-645b58d02e57" name="filterId" direction="In">
+                  <elementDefinition Id="db045eb0-2cab-4870-84e6-28159101db8a" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
       </Interface>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -295,6 +365,11 @@
           </operation>
         </ownedOperationsInternal>
       </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="ff2fe278-1d6c-4fd6-ad96-d38785cb56d0" name="IUsersRepository" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="28fce593-b22a-464f-baeb-ead2978c6c56" />
+      </Interface>
     </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="f7f303a4-352b-4d85-9746-95a1e65649f5" name="Naviam.DataAnalyzer.Modeling">

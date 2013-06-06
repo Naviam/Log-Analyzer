@@ -23,14 +23,130 @@
         Id="feac3be5-d14f-48d2-8d6d-dfe7651c018e"
         name="IDataSourcesRepository"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="59e2f2c9-4496-483b-9779-9da2c4ab794a"
+            name="AddDataSource"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1c98fa33-b7bb-4eef-9be2-e2cdda03ffc1"
+                  name="user"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bf29823d-5f7c-4843-96d7-17383de3d1d9"
+                  name="dataSource"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e364b6cf-4ce9-4913-8f00-7235ce2a13df"
+            name="GetDataSource"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b083eb52-89b3-4503-b11a-07ade605570a"
+            name="RemoveDataSource"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="350ba4c4-09a3-4315-96fd-b191415257a0"
+                  name="user"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="93969e2d-f09b-48f2-9f36-04a0baa6b257"
+                  name="dataSourceId"
+                  direction="In" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a2471b09-a2ec-4aad-b825-8433d4c8eb68"
+            name="GetUserDataSources"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <Interface
         Id="7441df15-9121-4499-8718-6ddd655c83b9"
         name="IFiltersRepository"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="e7483cc8-a92f-4667-ba02-37681d9a97be"
+            name="AddDataSourceFilter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ee0039fb-812c-4858-8a1f-4b538a82f08e"
+                  name="dataSourceId"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="11682e4a-ebc0-4615-8ffd-c914a64f9723"
+                  name="filter"
+                  direction="In" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1389a10c-5eba-422f-8373-b2b816116be1"
+            name="RemoveDataSourceFilter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d0b6af76-9a45-4140-b849-8210b696a29d"
+                  name="dataSourceId"
+                  direction="In" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="db045eb0-2cab-4870-84e6-28159101db8a"
+                  name="filterId"
+                  direction="In" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <Interface
@@ -494,6 +610,13 @@
           </operation>
         </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="28fce593-b22a-464f-baeb-ead2978c6c56"
+        name="IUsersRepository"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
