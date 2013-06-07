@@ -1,4 +1,7 @@
-﻿
+.popover {
+    max-width: none;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 
