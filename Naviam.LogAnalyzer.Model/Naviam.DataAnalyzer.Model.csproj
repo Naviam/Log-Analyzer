@@ -39,6 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSource\Column.cs" />
+    <Compile Include="DataSource\DataSource.cs" />
+    <Compile Include="DataSource\DataSourceBase.cs" />
+    <Compile Include="DataSource\DateColumn.cs" />
+    <Compile Include="DataSource\IHub.cs" />
+    <Compile Include="DataSource\IntColumn.cs" />
+    <Compile Include="DataSource\ISubscriber.cs" />
+    <Compile Include="DataSource\MapInfo.cs" />
+    <Compile Include="DataSource\Record.cs" />
+    <Compile Include="DataSource\StringColumn.cs" />
+    <Compile Include="Filter\CompareOperations.cs" />
+    <Compile Include="Filter\Condition.cs" />
+    <Compile Include="Filter\IFiltrableColumn.cs" />
+    <Compile Include="DataSource\Operations.cs" />
+    <Compile Include="Filter\Filter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +61,9 @@
       <Project>{ac1a6b51-b365-406c-9bdb-793cd2ef7d48}</Project>
       <Name>Naviam.DataAnalyzer.Infrastructure</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Account\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
