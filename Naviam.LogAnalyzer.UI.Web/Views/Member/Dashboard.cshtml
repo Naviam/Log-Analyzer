@@ -3,50 +3,29 @@
     Layout = "~/Views/Shared/_LayoutNew.cshtml";
 }
 
-<h2>Dashboard</h2>
-<div class="pull-left">
-    Frequency:
-    <select>
-        <option>1 min</option>
-        <option>2 min</option>
-        <option>3 min</option>
-        <option>4 min</option>
-        <option>5 min</option>
-    </select>
-    Show last:
-    <select>
-        <option>10</option>
-        <option>50</option>
-        <option>100</option>
-    </select>
+<div class="span3">
+    <div style="padding-top: 80px"><button type="button" class="btn btn-success">Add Filter</button></div>
+    <ul class="nav nav-list bs-docs-sidenav affix">
+        <li class="active"><a href="#overview"><i class="icon-chevron-right"></i> Filter 1</a></li>
+        <li><a href="#transitions"><i class="icon-chevron-right"></i> Filter 2</a></li>
+        <li><a href="#modals"><i class="icon-chevron-right"></i> Filter 3</a></li>
+        <li><a href="#dropdowns"><i class="icon-chevron-right"></i> Filter 4</a></li>
+        <li><a href="#scrollspy"><i class="icon-chevron-right"></i> Filter 5</a></li>
+        <li><a href="#tabs"><i class="icon-chevron-right"></i> Filter 6</a></li>
+        <li><a href="#tooltips"><i class="icon-chevron-right"></i> Filter N</a></li>
+    </ul>
 </div>
-<ul class="nav nav-pills pull-right">
-
-    <li>
-        <button type="button" class="btn btn-primary">Add Allert</button></li>
-    <li>
-        <button type="button" class="btn btn-primary">Add Filter</button></li>
-    <li class="dropdown">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Add DataSource<b class="caret"></b></button>
-        <ul class="dropdown-menu" role="menu">
-            <li><a href="#addRestDataSourceModdalWindow" role="menuitem" data-toggle="modal">HTTP/REST</a></li>
-            <li><a href="#addRestDataSourceModdalWindow" role="menuitem" data-toggle="modal">SOAP</a></li>
-        </ul>
-    </li>
-</ul>
-<br />
-<br />
-
-<a href="#" id="filterAnchor" >Manage filters</a>
+<div class="span9">
+<a href="#" id="filterAnchor">Manage filters</a>
 @{ Html.RenderPartial("_dashboardDataFilters");}
-<div id="addRestDataSourceModdalWindow" class="modal hide " aria-hidden="true">
+<div id="addRestDataSourceModdalWindow" class="modal hide" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button>
-        <h3>Add DataSource</h3>
+        <h3>Add Data Source</h3>
     </div>
     <div class="modal-body">
         <form class="form-horizontal">
-            <fieldset class="well the-fieldset">
+            <fieldset class="well">
                 <div class="control-group">
                     <label class="control-label" for="itemName">Service</label>
                     <div class="controls">
@@ -64,8 +43,8 @@
                         </select>
                         <button>Delete</button>
                     </div>
+                    <button>Add new field</button>
                 </div>
-                <button>Add new field</button>
             </fieldset>
         </form>
     </div>
@@ -76,12 +55,40 @@
 </div>
 <br />
 <br />
-<ul class="nav nav-tabs">
+<ul class="nav nav-pills" style="padding-top: 30px;">
     <li class="active"><a href="#ScLogs" data-toggle="tab">ServiceChannel Errors</a></li>
     <li><a href="#MyTwits" data-toggle="tab">My Twits</a></li>
 </ul>
 <div class="tab-content">
     <div class="tab-pane active" id="ScLogs">
+<div class="pull-left">
+    Frequency:
+    <div class="btn-group" data-toggle="buttons-radio">
+      <button type="button" class="btn btn-mini btn-success">1 min</button>
+      <button type="button" class="btn btn-mini btn-success">2 min</button>
+      <button type="button" class="btn btn-mini btn-success">3 min</button>
+      <button type="button" class="btn btn-mini btn-success">4 min</button>
+      <button type="button" class="btn btn-mini btn-success">5 min</button>
+    </div>
+    Show last:
+    <div class="btn-group" data-toggle="buttons-radio">
+      <button type="button" class="btn btn-mini btn-success">10</button>
+      <button type="button" class="btn btn-mini btn-success">50</button>
+      <button type="button" class="btn btn-mini btn-success">100</button>
+    </div>
+</div>
+<ul class="nav nav-pills pull-right">
+    <li><button type="button" class="btn btn-primary">Add Alert</button></li>
+    <li class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Add DataSource<b class="caret"></b></button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#addRestDataSourceModdalWindow" role="menuitem" data-toggle="modal">HTTP/REST</a></li>
+            <li><a href="#addRestDataSourceModdalWindow" role="menuitem" data-toggle="modal">SOAP</a></li>
+        </ul>
+    </li>
+</ul>
+<br />
+<br />
         <input type="text" id="dsId" />
         <input type="button" value="Open Connection" id="btnOpnCon"/>
         <table id="tbContent" class="table table-condensed">
@@ -148,6 +155,8 @@
         Total Records: <b>5</b>
     </div>
 </div>
+</div>
+
 @section Scripts
 {
 
