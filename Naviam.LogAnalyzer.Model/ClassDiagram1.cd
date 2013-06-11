@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Naviam.DataAnalyzer.Model.DataSource.Column" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataSource\Column.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Naviam.DataAnalyzer.Model.DataSource.DataSource">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAABAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataSource\DataSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naviam.DataAnalyzer.Model.DataSource.DateColumn">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>DataSource\DateColumn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naviam.DataAnalyzer.Model.DataSource.IntColumn">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>DataSource\IntColumn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naviam.DataAnalyzer.Model.DataSource.MapInfo">
+    <Position X="7.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAABAAAA=</HashCode>
+      <FileName>DataSource\MapInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naviam.DataAnalyzer.Model.DataSource.Record">
+    <Position X="2.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>DataSource\Record.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naviam.DataAnalyzer.Model.DataSource.StringColumn">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>DataSource\StringColumn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naviam.DataAnalyzer.Model.Filter.Condition" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAgAAEAAAAAAAA=</HashCode>
+      <FileName>Filter\Condition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naviam.DataAnalyzer.Model.Filter.Filter" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Filter\Filter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Naviam.DataAnalyzer.Model.Account.Account">
+    <Position X="4.5" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Account\Account.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Naviam.DataAnalyzer.Model.DataSource.IDataSourceRepository" Collapsed="true">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAQAAAACAAAAAAAAAAQAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataSource\IDataSourceRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Naviam.DataAnalyzer.Model.DataSource.IHub" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAEAAAAAAAAAQA=</HashCode>
+      <FileName>DataSource\IHub.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Naviam.DataAnalyzer.Model.DataSource.ISubscriber" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataSource\ISubscriber.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Naviam.DataAnalyzer.Model.Filter.IFiltrableColumn" Collapsed="true">
+    <Position X="9.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Filter\IFiltrableColumn.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Naviam.DataAnalyzer.Model.DataSource.Operations" Collapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgIAAAAAAAAAAAAAQAAAAAAQBAAA=</HashCode>
+      <FileName>DataSource\Operations.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Naviam.DataAnalyzer.Model.Filter.CompareOperations" Collapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Filter\CompareOperations.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
