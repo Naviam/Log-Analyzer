@@ -14,6 +14,12 @@ namespace Naviam.DataAnalyzer.UI.Controllers
         // POST api/<controller>
         public void Post(string userId, string datasourceId, [FromBody]JObject value)
         {
+            // get data source by id
+            // get connection id
+            // apply mapping
+            // apply data source filter
+            // send value
+
             var conid = DatasourceConnection.DataSourceConnectionMap[datasourceId];
             
             var connection = GlobalHost.ConnectionManager.GetConnectionContext<DatasourceConnection>();

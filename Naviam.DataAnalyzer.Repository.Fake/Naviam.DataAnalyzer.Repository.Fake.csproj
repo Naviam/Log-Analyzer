@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{13571DCA-D03A-4E33-96F5-022EE41139FD}</ProjectGuid>
+    <ProjectGuid>{6BA76F01-4105-42F9-9882-12E7B82862CF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Naviam.DataAnalyzer.Model</RootNamespace>
-    <AssemblyName>Naviam.DataAnalyzer.Model</AssemblyName>
+    <RootNamespace>Naviam.DataAnalyzer.Repository.Fake</RootNamespace>
+    <AssemblyName>Naviam.DataAnalyzer.Repository.Fake</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,33 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\Account.cs" />
-    <Compile Include="DataSource\Column.cs" />
-    <Compile Include="DataSource\DataSource.cs" />
-    <Compile Include="DataSource\DateColumn.cs" />
-    <Compile Include="DataSource\IDataSourceRepository.cs" />
-    <Compile Include="DataSource\IHub.cs" />
-    <Compile Include="DataSource\IntColumn.cs" />
-    <Compile Include="DataSource\ISubscriber.cs" />
-    <Compile Include="DataSource\MapInfo.cs" />
-    <Compile Include="DataSource\Record.cs" />
-    <Compile Include="DataSource\StringColumn.cs" />
-    <Compile Include="Filter\CompareOperations.cs" />
-    <Compile Include="Filter\Condition.cs" />
-    <Compile Include="Filter\IFiltrableColumn.cs" />
-    <Compile Include="DataSource\Operations.cs" />
-    <Compile Include="Filter\Filter.cs" />
+    <Compile Include="Repositories\DataSourceRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Naviam.LogAnalyzer.Infrastructure\Naviam.DataAnalyzer.Infrastructure.csproj">
-      <Project>{ac1a6b51-b365-406c-9bdb-793cd2ef7d48}</Project>
-      <Name>Naviam.DataAnalyzer.Infrastructure</Name>
+    <ProjectReference Include="..\Naviam.LogAnalyzer.Model\Naviam.DataAnalyzer.Model.csproj">
+      <Project>{13571dca-d03a-4e33-96f5-022ee41139fd}</Project>
+      <Name>Naviam.DataAnalyzer.Model</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
