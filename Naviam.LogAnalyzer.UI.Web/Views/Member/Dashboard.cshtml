@@ -5,14 +5,14 @@
 
 <h2>Dashboard</h2>
 <div class="pull-left">
-    Frequency:
+    @*Frequency:
     <select>
         <option>1 min</option>
         <option>2 min</option>
         <option>3 min</option>
         <option>4 min</option>
         <option>5 min</option>
-    </select>
+    </select>*@
     Show last:
     <select>
         <option>10</option>
@@ -39,41 +39,7 @@
 
 <a href="#" id="filterAnchor" >Manage filters</a>
 @{ Html.RenderPartial("_dashboardDataFilters");}
-<div id="addRestDataSourceModdalWindow" class="modal hide " aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×</button>
-        <h3>Add DataSource</h3>
-    </div>
-    <div class="modal-body">
-        <form class="form-horizontal">
-            <fieldset class="well the-fieldset">
-                <div class="control-group">
-                    <label class="control-label" for="itemName">Service</label>
-                    <div class="controls">
-                        <input class="input-medium focused" type="text" />
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label" for="itemName">ID</label>
-                    <div class="controls">
-                        <select class="input-medium focused">
-                            <option>Int32</option>
-                            <option>String</option>
-                            <option>DateTime</option>
-                            <option>Bool</option>
-                        </select>
-                        <button>Delete</button>
-                    </div>
-                </div>
-                <button>Add new field</button>
-            </fieldset>
-        </form>
-    </div>
-    <div class="modal-footer">
-        <button class="btn" data-dismiss="modal">Close</button>
-        <button class="btn btn-primary">Save changes</button>
-    </div>
-</div>
+@{ Html.RenderPartial("_addRestDataSource");}
 <br />
 <br />
 <ul class="nav nav-tabs">
@@ -82,6 +48,7 @@
 </ul>
 <div class="tab-content">
     <div class="tab-pane active" id="ScLogs">
+        <b>Datasource ID: 32B08481-9298-48C6-AFCF-644B5A2CC5A3</b><br />
         <input type="text" id="dsId" />
         <input type="button" value="Open Connection" id="btnOpnCon"/>
         <table id="tbContent" class="table table-condensed">
@@ -172,9 +139,6 @@
                        $('#tbContent tr:last').after('<tr><td>'+data.Key+'</td><td>'+data.Message+'</td><td>'+data.Exception+'</td><td>'+data.Level+'</td><td>'+data.Date+'</td></tr>');
                    });
                });
-               
-              
-
            });
        });
     </script>
