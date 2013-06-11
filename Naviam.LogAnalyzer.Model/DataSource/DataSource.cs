@@ -1,39 +1,16 @@
 ﻿namespace Naviam.DataAnalyzer.Model.DataSource
 {
+    using System;
     using System.Collections.Generic;
+    using Naviam.DataAnalyzer.Model.Filter;
 
-    public class DataSource : DataSourceBase
+    public class DataSource
     {
-        public object RequestParameters { get; set; }
+        public Guid Id { get; set; }
 
-        public object ResponseParameters { get; set; }
-
-        public object Credentials { get; set; }
-
-        public object Endpoint { get; set; }
+        public List<Filter> Filters { get; set; }
 
         public IEnumerable<MapInfo> Map { get; set; }
-
-        public void AddRequestParameter()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void RemoveRequestParameter()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void AddResponseParameter()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void RemoveResponseParameter()
-        {
-            throw new System.NotImplementedException();
-        }
-
     }
 }
 

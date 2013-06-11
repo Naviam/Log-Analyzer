@@ -36,6 +36,16 @@
       <SubType>Content</SubType>
       <DependentUpon>ClassDiagrams\Infrastructure.classdiagram</DependentUpon>
     </Content>
+    <Content Include="ClassDiagrams\Record.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ClassDiagrams\Record.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClassDiagrams\Record.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Graph1.dgml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="UseCases.usecasediagram">
       <SubType>Content</SubType>
     </Content>
