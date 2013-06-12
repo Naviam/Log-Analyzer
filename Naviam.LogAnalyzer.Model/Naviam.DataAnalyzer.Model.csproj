@@ -55,6 +55,7 @@
     <Compile Include="Filter\IFiltrableColumn.cs" />
     <Compile Include="DataSource\Operations.cs" />
     <Compile Include="Filter\Filter.cs" />
+    <Compile Include="Infractructure\IAmazonConfigurable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

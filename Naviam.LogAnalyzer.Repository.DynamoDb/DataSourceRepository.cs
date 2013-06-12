@@ -1,9 +1,10 @@
-﻿namespace Naviam.DataAnalyzer.Repository.Fake.Repositories
+﻿namespace Naviam.DataAnalyzer.Repository.DynamoDb
 {
     using System;
     using System.Collections.Generic;
 
     using Naviam.DataAnalyzer.Model.DataSource;
+    using Naviam.DataAnalyzer.Model.Infractructure;
 
     public class DataSourceRepository : IDataSourceRepository
     {
@@ -12,7 +13,7 @@
             throw new NotImplementedException();
         }
 
-        public List<DataSource> GetDataSources(int userId)
+        public List<DataSource> GetDataSources(int accountId)
         {
             throw new NotImplementedException();
         }
