@@ -16,6 +16,8 @@ namespace Naviam.DataAnalyzer.Services.WebApi
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            GlobalConfiguration.Configuration.DependencyResolver = new ScopeContainer(ApplicationContainer.Prepare());
         }
     }
 }
