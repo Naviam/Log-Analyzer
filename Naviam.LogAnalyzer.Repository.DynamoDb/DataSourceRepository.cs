@@ -4,7 +4,6 @@
     using System.Collections.Generic;
 
     using Naviam.DataAnalyzer.Model.DataSource;
-    using Naviam.DataAnalyzer.Model.Infractructure;
 
     public class DataSourceRepository : IDataSourceRepository
     {
