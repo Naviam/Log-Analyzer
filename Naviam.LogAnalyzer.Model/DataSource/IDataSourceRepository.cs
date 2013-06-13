@@ -5,14 +5,14 @@
 
     public interface IDataSourceRepository
     {
-        DataSource GetDataSource(Guid id);
+        DataSource GetDataSource(string id);
 
-        List<DataSource> GetDataSources(int userId);
+        List<DataSource> GetDataSources(int accountId);
 
-        Guid AddDataSource(DataSource dataSource);
+        string AddDataSource(DataSource dataSource, int accountId);
 
         DataSource UpdateDataSource(DataSource dataSource);
 
-        void DeleteDataSource(Guid id);
+        void DeleteDataSource(string id);
     }
 }
