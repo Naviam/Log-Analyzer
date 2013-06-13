@@ -77,6 +77,7 @@
     <ProjectReference Include="..\Naviam.LogAnalyzer.Services.Messages\Naviam.DataAnalyzer.Services.Messages.csproj">
       <Project>{eb29bfb3-d796-48c7-8b84-eb188ce37f57}</Project>
       <Name>Naviam.DataAnalyzer.Services.Messages</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Naviam.DataAnalyzer.Services.Contracts\Naviam.DataAnalyzer.Services.Contracts.csproj">
       <Project>{404e97f5-d76e-4511-a47f-4fd1883ac3c0}</Project>
       <Name>Naviam.DataAnalyzer.Services.Contracts</Name>
