@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="3011f8b6-aa9d-4008-b95d-0c7155e38727" name="Record" linkedPackageId="7c04d64b-35ba-42c7-af0e-ba1c67c6ba1b" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="3011f8b6-aa9d-4008-b95d-0c7155e38727" name="Record" linkedPackageId="7c04d64b-35ba-42c7-af0e-ba1c67c6ba1b" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="054276d0-28b7-47c3-8634-a9a6cca57bd4" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="b1aa384e-c676-4b8d-841f-427b30481fc5" />
@@ -72,32 +72,6 @@
       </propertyInstances>
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="2800ed6c-283c-4373-bb8f-e9f6c093ab7c">
-      <profileInstance Id="28a6c97e-c6b9-4217-8ef6-1e527e80792d" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="be460bc1-b40f-4a39-9266-a704ff9052cd">
-      <profileInstance Id="af021ffd-91a2-48ba-b492-e015a55a27f0" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="2da31a9e-f5c3-4d6d-86bd-3820105d8707">
-      <profileInstance Id="49e8f04e-8c84-418c-a811-10ea5788d0a7" name="CSharpProfile">
-        <elementDefinition Id="dd5f855c-4194-474b-97e8-f07c90f59443" />
-      </profileInstance>
-      <elementDefinition Id="db06e7e1-c76f-43bf-b113-ff87662e14d8" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="8d0d28dd-3048-4e63-a258-82aced555d51">
-      <profileInstance Id="ed741744-8dc2-44d3-a054-2178defe53b9" name="TextTemplateBindings">
-        <elementDefinition Id="22395e1d-ca5b-4ecf-94e4-428768e2de71" />
-      </profileInstance>
-      <elementDefinition Id="d1caa7f8-c5bc-4079-8f0f-d22197db0cd5" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
       <referencedType Id="9a61aa9e-86ab-495e-abd5-03a307bdf8c1" name="Condition" isAbstract="false" isLeaf="false" cachedFullName="Naviam.DataAnalyzer.Modeling::Condition">
@@ -1128,5 +1102,31 @@
   </packagedElements>
   <package Id="7c04d64b-35ba-42c7-af0e-ba1c67c6ba1b" name="Naviam.DataAnalyzer.Modeling">
     <elementDefinition Id="ed62779c-a443-4c58-9877-0bbce7677c90" />
+    <profileInstances>
+      <packageHasProfileInstances Id="2800ed6c-283c-4373-bb8f-e9f6c093ab7c">
+        <profileInstance Id="28a6c97e-c6b9-4217-8ef6-1e527e80792d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="be460bc1-b40f-4a39-9266-a704ff9052cd">
+        <profileInstance Id="af021ffd-91a2-48ba-b492-e015a55a27f0" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="2da31a9e-f5c3-4d6d-86bd-3820105d8707">
+        <profileInstance Id="49e8f04e-8c84-418c-a811-10ea5788d0a7" name="CSharpProfile">
+          <elementDefinition Id="dd5f855c-4194-474b-97e8-f07c90f59443" />
+        </profileInstance>
+        <elementDefinition Id="db06e7e1-c76f-43bf-b113-ff87662e14d8" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="8d0d28dd-3048-4e63-a258-82aced555d51">
+        <profileInstance Id="ed741744-8dc2-44d3-a054-2178defe53b9" name="TextTemplateBindings">
+          <elementDefinition Id="22395e1d-ca5b-4ecf-94e4-428768e2de71" />
+        </profileInstance>
+        <elementDefinition Id="d1caa7f8-c5bc-4079-8f0f-d22197db0cd5" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

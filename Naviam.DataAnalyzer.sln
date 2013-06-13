@@ -10,8 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E6D2E0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Services.WebApi", "Naviam.LogAnalyzer.Services.WebApi\Naviam.DataAnalyzer.Services.WebApi.csproj", "{0B24BF8A-5938-462D-9B63-FDF46F8684C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Services.Messages", "Naviam.LogAnalyzer.Services.Messages\Naviam.DataAnalyzer.Services.Messages.csproj", "{EB29BFB3-D796-48C7-8B84-EB188CE37F57}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.UI.Web", "Naviam.LogAnalyzer.UI.Web\Naviam.DataAnalyzer.UI.Web.csproj", "{393B82CC-C795-4B59-95A1-CB49C55C52E0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. QA", "1. QA", "{DA53EFAC-7E9C-4E55-A9E6-410CE0853831}"
@@ -34,8 +32,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.QA.Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.UI.Controllers", "Naviam.LogAnalyzer.UI.Controllers\Naviam.DataAnalyzer.UI.Controllers.csproj", "{1CD245B9-8B26-4614-B25F-77C702C8DE54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Services.Contracts", "Naviam.LogAnalyzer.Services.Contracts\Naviam.DataAnalyzer.Services.Contracts.csproj", "{F76461F4-E70C-454B-922A-81D6DEC315C1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Services.Proxy", "Naviam.LogAnalyzer.Services.Proxy\Naviam.DataAnalyzer.Services.Proxy.csproj", "{8AD1416D-D2D7-4107-B8B7-F76F4D83EB1A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6. Domain Model", "6. Domain Model", "{63114B6C-106B-4658-85B2-B6E899246233}"
@@ -48,6 +44,10 @@ Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Naviam.DataAnalyzer.Modelin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Repository.Fake", "Naviam.DataAnalyzer.Repository.Fake\Naviam.DataAnalyzer.Repository.Fake.csproj", "{6BA76F01-4105-42F9-9882-12E7B82862CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Services.Contracts", "Naviam.DataAnalyzer.Services.Contracts\Naviam.DataAnalyzer.Services.Contracts.csproj", "{404E97F5-D76E-4511-A47F-4FD1883AC3C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Services.Messaging", "Naviam.DataAnalyzer.Services.Messaging\Naviam.DataAnalyzer.Services.Messaging.csproj", "{3BD66BB0-D942-440A-B356-FCBA1B6E20C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,10 +58,6 @@ Global
 		{0B24BF8A-5938-462D-9B63-FDF46F8684C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B24BF8A-5938-462D-9B63-FDF46F8684C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B24BF8A-5938-462D-9B63-FDF46F8684C0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB29BFB3-D796-48C7-8B84-EB188CE37F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB29BFB3-D796-48C7-8B84-EB188CE37F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB29BFB3-D796-48C7-8B84-EB188CE37F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB29BFB3-D796-48C7-8B84-EB188CE37F57}.Release|Any CPU.Build.0 = Release|Any CPU
 		{393B82CC-C795-4B59-95A1-CB49C55C52E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{393B82CC-C795-4B59-95A1-CB49C55C52E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{393B82CC-C795-4B59-95A1-CB49C55C52E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -86,10 +82,6 @@ Global
 		{1CD245B9-8B26-4614-B25F-77C702C8DE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CD245B9-8B26-4614-B25F-77C702C8DE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CD245B9-8B26-4614-B25F-77C702C8DE54}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F76461F4-E70C-454B-922A-81D6DEC315C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F76461F4-E70C-454B-922A-81D6DEC315C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F76461F4-E70C-454B-922A-81D6DEC315C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F76461F4-E70C-454B-922A-81D6DEC315C1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8AD1416D-D2D7-4107-B8B7-F76F4D83EB1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8AD1416D-D2D7-4107-B8B7-F76F4D83EB1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AD1416D-D2D7-4107-B8B7-F76F4D83EB1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -110,15 +102,23 @@ Global
 		{6BA76F01-4105-42F9-9882-12E7B82862CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BA76F01-4105-42F9-9882-12E7B82862CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BA76F01-4105-42F9-9882-12E7B82862CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{404E97F5-D76E-4511-A47F-4FD1883AC3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{404E97F5-D76E-4511-A47F-4FD1883AC3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{404E97F5-D76E-4511-A47F-4FD1883AC3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{404E97F5-D76E-4511-A47F-4FD1883AC3C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BD66BB0-D942-440A-B356-FCBA1B6E20C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BD66BB0-D942-440A-B356-FCBA1B6E20C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BD66BB0-D942-440A-B356-FCBA1B6E20C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BD66BB0-D942-440A-B356-FCBA1B6E20C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{EB29BFB3-D796-48C7-8B84-EB188CE37F57} = {B5FCE8D9-AA47-4364-8405-1EEB9FB579F9}
 		{0B24BF8A-5938-462D-9B63-FDF46F8684C0} = {B5FCE8D9-AA47-4364-8405-1EEB9FB579F9}
-		{F76461F4-E70C-454B-922A-81D6DEC315C1} = {B5FCE8D9-AA47-4364-8405-1EEB9FB579F9}
 		{8AD1416D-D2D7-4107-B8B7-F76F4D83EB1A} = {B5FCE8D9-AA47-4364-8405-1EEB9FB579F9}
+		{404E97F5-D76E-4511-A47F-4FD1883AC3C0} = {B5FCE8D9-AA47-4364-8405-1EEB9FB579F9}
+		{3BD66BB0-D942-440A-B356-FCBA1B6E20C4} = {B5FCE8D9-AA47-4364-8405-1EEB9FB579F9}
 		{393B82CC-C795-4B59-95A1-CB49C55C52E0} = {0E719449-7CA2-473A-91CE-29425D7AB30D}
 		{1CD245B9-8B26-4614-B25F-77C702C8DE54} = {0E719449-7CA2-473A-91CE-29425D7AB30D}
 		{887616C5-E881-468E-BB56-7E4C31991D9A} = {DA53EFAC-7E9C-4E55-A9E6-410CE0853831}

@@ -144,8 +144,6 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -197,6 +195,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -214,14 +213,6 @@
     <ProjectReference Include="..\Naviam.LogAnalyzer.Repository.DynamoDb\Naviam.DataAnalyzer.Repository.DynamoDb.csproj">
       <Project>{c1ee12e5-be7a-415a-9097-872e962b4fac}</Project>
       <Name>Naviam.DataAnalyzer.Repository.DynamoDb</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Naviam.LogAnalyzer.Services.Contracts\Naviam.DataAnalyzer.Services.Contracts.csproj">
-      <Project>{f76461f4-e70c-454b-922a-81d6dec315c1}</Project>
-      <Name>Naviam.DataAnalyzer.Services.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Naviam.LogAnalyzer.Services.Messages\Naviam.DataAnalyzer.Services.Messages.csproj">
-      <Project>{eb29bfb3-d796-48c7-8b84-eb188ce37f57}</Project>
-      <Name>Naviam.DataAnalyzer.Services.Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
