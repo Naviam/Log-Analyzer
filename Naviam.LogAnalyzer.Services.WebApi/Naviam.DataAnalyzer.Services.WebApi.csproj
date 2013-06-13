@@ -141,6 +141,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DataSourceController.cs" />
+    <Compile Include="Controllers\IncomingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -165,6 +166,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Naviam.DataAnalyzer.Services.Concrete\Naviam.DataAnalyzer.Services.Concrete.csproj">
+      <Project>{8cfccaef-43ab-4842-9805-7d89282ecd8e}</Project>
+      <Name>Naviam.DataAnalyzer.Services.Concrete</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Naviam.DataAnalyzer.Services.Contracts\Naviam.DataAnalyzer.Services.Contracts.csproj">
       <Project>{404e97f5-d76e-4511-a47f-4fd1883ac3c0}</Project>
       <Name>Naviam.DataAnalyzer.Services.Contracts</Name>

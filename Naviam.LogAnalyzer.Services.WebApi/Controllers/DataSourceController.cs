@@ -33,7 +33,7 @@
                 */
             }
 
-            var newMessage = this.Request.CreateResponse<DataSource>(HttpStatusCode.OK, /*there is ahould be mapping data object with domain object*/ data);
+            var newMessage = this.Request.CreateResponse<GetDataSourceByIdResponse>(HttpStatusCode.OK, data);
             return newMessage;
         }
 
