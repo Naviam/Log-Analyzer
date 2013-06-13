@@ -166,6 +166,17 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Naviam.DataAnalyzer.Infrastructure\Naviam.DataAnalyzer.Infrastructure.csproj">
+      <Project>{5f5e4c34-8a30-4c49-a20e-da5eca2177cc}</Project>
+      <Name>Naviam.DataAnalyzer.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naviam.LogAnalyzer.Model\Naviam.DataAnalyzer.Model.csproj">
+      <Project>{13571dca-d03a-4e33-96f5-022ee41139fd}</Project>
+      <Name>Naviam.DataAnalyzer.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naviam.LogAnalyzer.Repository.DynamoDb\Naviam.DataAnalyzer.Repository.DynamoDb.csproj">
+      <Project>{c1ee12e5-be7a-415a-9097-872e962b4fac}</Project>
+      <Name>Naviam.DataAnalyzer.Repository.DynamoDb</Name>
     <ProjectReference Include="..\Naviam.DataAnalyzer.Services.Concrete\Naviam.DataAnalyzer.Services.Concrete.csproj">
       <Project>{8cfccaef-43ab-4842-9805-7d89282ecd8e}</Project>
       <Name>Naviam.DataAnalyzer.Services.Concrete</Name>

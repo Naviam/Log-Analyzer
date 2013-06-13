@@ -1,4 +1,4 @@
-﻿namespace Naviam.DataAnalyzer.Model.Infractructure
+﻿namespace Naviam.DataAnalyzer.Infrastructure.Amazon
 {
     public interface IAmazonConfigurable
     {
