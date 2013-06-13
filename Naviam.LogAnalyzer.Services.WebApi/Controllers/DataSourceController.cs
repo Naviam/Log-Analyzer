@@ -3,24 +3,25 @@
     using System.Net;
     using System.Net.Http;
     using System.Web.Http;
-    using Naviam.DataAnalyzer.Model.DataSource;
+    using Naviam.DataAnalyzer.Services.Contracts.DataSource;
+    using Naviam.DataAnalyzer.Services.Messaging.DataSource;
 
     public class DataSourceController : ApiController
     {
         /// <summary>
         /// data source repository.
         /// </summary>
-        private readonly IDataSourceRepository repository;
+        private readonly IDataSourceService _dataSourceService;
 
-        public DataSourceController(IDataSourceRepository repository)
+        public DataSourceController(IDataSourceService service)
         {
-            this.repository = repository;
+            this._dataSourceService = service;
         }
 
         // GET api/datasource?id=880557C8E4FC4D199912CE215090DCBD
         public HttpResponseMessage Get(string id)
         {
-            var data = this.repository.GetDataSource(id);
+            var data = this._dataSourceService.GetDataSource(new GetDataSourceByIdRequest());
 
             if (data == null)
             {
