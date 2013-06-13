@@ -65,7 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatasourceConnection.cs" />
-    <Compile Include="HomeController.cs" />
     <Compile Include="MemberController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestApiController.cs" />
@@ -78,6 +77,17 @@
     <ProjectReference Include="..\Naviam.LogAnalyzer.Services.Messages\Naviam.DataAnalyzer.Services.Messages.csproj">
       <Project>{eb29bfb3-d796-48c7-8b84-eb188ce37f57}</Project>
       <Name>Naviam.DataAnalyzer.Services.Messages</Name>
+    <ProjectReference Include="..\Naviam.DataAnalyzer.Services.Contracts\Naviam.DataAnalyzer.Services.Contracts.csproj">
+      <Project>{404e97f5-d76e-4511-a47f-4fd1883ac3c0}</Project>
+      <Name>Naviam.DataAnalyzer.Services.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naviam.DataAnalyzer.Services.Messaging\Naviam.DataAnalyzer.Services.Messaging.csproj">
+      <Project>{3bd66bb0-d942-440a-b356-fcba1b6e20c4}</Project>
+      <Name>Naviam.DataAnalyzer.Services.Messaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naviam.LogAnalyzer.Infrastructure\Naviam.DataAnalyzer.Infrastructure.csproj">
+      <Project>{ac1a6b51-b365-406c-9bdb-793cd2ef7d48}</Project>
+      <Name>Naviam.DataAnalyzer.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\Naviam.LogAnalyzer.Services.Proxy\Naviam.DataAnalyzer.Services.Proxy.csproj">
       <Project>{8ad1416d-d2d7-4107-b8b7-f76f4d83eb1a}</Project>

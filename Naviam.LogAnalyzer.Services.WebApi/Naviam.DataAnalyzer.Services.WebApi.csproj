@@ -140,23 +140,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
-    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
-    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
-    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
-    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
-    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
-    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
-    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
-    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
-    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
-    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
-    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
-    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
-    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\DataSourceController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\IncomingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -164,20 +149,7 @@
     <Compile Include="ScopeContainer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\HelpPage\HelpPage.css" />
-    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Areas\HelpPage\Views\Web.config" />
-    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -185,27 +157,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Images\accent.png" />
-    <Content Include="Images\bullet.png" />
-    <Content Include="Images\heroAccent.png" />
-    <Content Include="Images\orderedList0.png" />
-    <Content Include="Images\orderedList1.png" />
-    <Content Include="Images\orderedList2.png" />
-    <Content Include="Images\orderedList3.png" />
-    <Content Include="Images\orderedList4.png" />
-    <Content Include="Images\orderedList5.png" />
-    <Content Include="Images\orderedList6.png" />
-    <Content Include="Images\orderedList7.png" />
-    <Content Include="Images\orderedList8.png" />
-    <Content Include="Images\orderedList9.png" />
-    <Content Include="Scripts\_references.js" />
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -226,14 +177,21 @@
     <ProjectReference Include="..\Naviam.LogAnalyzer.Repository.DynamoDb\Naviam.DataAnalyzer.Repository.DynamoDb.csproj">
       <Project>{c1ee12e5-be7a-415a-9097-872e962b4fac}</Project>
       <Name>Naviam.DataAnalyzer.Repository.DynamoDb</Name>
+    <ProjectReference Include="..\Naviam.DataAnalyzer.Services.Concrete\Naviam.DataAnalyzer.Services.Concrete.csproj">
+      <Project>{8cfccaef-43ab-4842-9805-7d89282ecd8e}</Project>
+      <Name>Naviam.DataAnalyzer.Services.Concrete</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Naviam.LogAnalyzer.Services.Contracts\Naviam.DataAnalyzer.Services.Contracts.csproj">
-      <Project>{f76461f4-e70c-454b-922a-81d6dec315c1}</Project>
+    <ProjectReference Include="..\Naviam.DataAnalyzer.Services.Contracts\Naviam.DataAnalyzer.Services.Contracts.csproj">
+      <Project>{404e97f5-d76e-4511-a47f-4fd1883ac3c0}</Project>
       <Name>Naviam.DataAnalyzer.Services.Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Naviam.LogAnalyzer.Services.Messages\Naviam.DataAnalyzer.Services.Messages.csproj">
-      <Project>{eb29bfb3-d796-48c7-8b84-eb188ce37f57}</Project>
-      <Name>Naviam.DataAnalyzer.Services.Messages</Name>
+    <ProjectReference Include="..\Naviam.DataAnalyzer.Services.Messaging\Naviam.DataAnalyzer.Services.Messaging.csproj">
+      <Project>{3bd66bb0-d942-440a-b356-fcba1b6e20c4}</Project>
+      <Name>Naviam.DataAnalyzer.Services.Messaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naviam.LogAnalyzer.Infrastructure\Naviam.DataAnalyzer.Infrastructure.csproj">
+      <Project>{ac1a6b51-b365-406c-9bdb-793cd2ef7d48}</Project>
+      <Name>Naviam.DataAnalyzer.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
