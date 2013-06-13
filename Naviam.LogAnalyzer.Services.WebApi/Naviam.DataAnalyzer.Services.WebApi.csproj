@@ -215,8 +215,8 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Naviam.LogAnalyzer.Infrastructure\Naviam.DataAnalyzer.Infrastructure.csproj">
-      <Project>{ac1a6b51-b365-406c-9bdb-793cd2ef7d48}</Project>
+    <ProjectReference Include="..\Naviam.DataAnalyzer.Infrastructure\Naviam.DataAnalyzer.Infrastructure.csproj">
+      <Project>{5f5e4c34-8a30-4c49-a20e-da5eca2177cc}</Project>
       <Name>Naviam.DataAnalyzer.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\Naviam.LogAnalyzer.Model\Naviam.DataAnalyzer.Model.csproj">

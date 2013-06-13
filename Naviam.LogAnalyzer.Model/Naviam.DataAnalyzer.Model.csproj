@@ -55,14 +55,7 @@
     <Compile Include="Filter\IFiltrableColumn.cs" />
     <Compile Include="DataSource\Operations.cs" />
     <Compile Include="Filter\Filter.cs" />
-    <Compile Include="Infractructure\IAmazonConfigurable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Naviam.LogAnalyzer.Infrastructure\Naviam.DataAnalyzer.Infrastructure.csproj">
-      <Project>{ac1a6b51-b365-406c-9bdb-793cd2ef7d48}</Project>
-      <Name>Naviam.DataAnalyzer.Infrastructure</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

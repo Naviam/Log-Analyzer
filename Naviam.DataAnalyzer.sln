@@ -24,8 +24,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infrastructure", "4. Inf
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Repository", "5. Repository", "{AF875A4C-8E32-49F7-9E0B-530DC5B15DC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Infrastructure", "Naviam.LogAnalyzer.Infrastructure\Naviam.DataAnalyzer.Infrastructure.csproj", "{AC1A6B51-B365-406C-9BDB-793CD2EF7D48}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Repository.DynamoDb", "Naviam.LogAnalyzer.Repository.DynamoDb\Naviam.DataAnalyzer.Repository.DynamoDb.csproj", "{C1EE12E5-BE7A-415A-9097-872E962B4FAC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.QA.Specs", "Naviam.LogAnalyzer.QA.Specs\Naviam.DataAnalyzer.QA.Specs.csproj", "{887616C5-E881-468E-BB56-7E4C31991D9A}"
@@ -48,6 +46,8 @@ Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Naviam.DataAnalyzer.Modelin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Repository.Fake", "Naviam.DataAnalyzer.Repository.Fake\Naviam.DataAnalyzer.Repository.Fake.csproj", "{6BA76F01-4105-42F9-9882-12E7B82862CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Infrastructure", "Naviam.DataAnalyzer.Infrastructure\Naviam.DataAnalyzer.Infrastructure.csproj", "{5F5E4C34-8A30-4C49-A20E-DA5ECA2177CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,10 +66,6 @@ Global
 		{393B82CC-C795-4B59-95A1-CB49C55C52E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{393B82CC-C795-4B59-95A1-CB49C55C52E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{393B82CC-C795-4B59-95A1-CB49C55C52E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC1A6B51-B365-406C-9BDB-793CD2EF7D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC1A6B51-B365-406C-9BDB-793CD2EF7D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC1A6B51-B365-406C-9BDB-793CD2EF7D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC1A6B51-B365-406C-9BDB-793CD2EF7D48}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C1EE12E5-BE7A-415A-9097-872E962B4FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C1EE12E5-BE7A-415A-9097-872E962B4FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1EE12E5-BE7A-415A-9097-872E962B4FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -110,6 +106,10 @@ Global
 		{6BA76F01-4105-42F9-9882-12E7B82862CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BA76F01-4105-42F9-9882-12E7B82862CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BA76F01-4105-42F9-9882-12E7B82862CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F5E4C34-8A30-4C49-A20E-DA5ECA2177CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F5E4C34-8A30-4C49-A20E-DA5ECA2177CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F5E4C34-8A30-4C49-A20E-DA5ECA2177CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F5E4C34-8A30-4C49-A20E-DA5ECA2177CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,8 +123,8 @@ Global
 		{1CD245B9-8B26-4614-B25F-77C702C8DE54} = {0E719449-7CA2-473A-91CE-29425D7AB30D}
 		{887616C5-E881-468E-BB56-7E4C31991D9A} = {DA53EFAC-7E9C-4E55-A9E6-410CE0853831}
 		{B50AEE93-F3BD-43E9-BDFC-F2772A2723E1} = {DA53EFAC-7E9C-4E55-A9E6-410CE0853831}
-		{AC1A6B51-B365-406C-9BDB-793CD2EF7D48} = {1EA214BD-4687-4418-AD23-5F2D0D4A57CF}
 		{7D54FF56-94C5-4518-8057-422F4324009E} = {1EA214BD-4687-4418-AD23-5F2D0D4A57CF}
+		{5F5E4C34-8A30-4C49-A20E-DA5ECA2177CC} = {1EA214BD-4687-4418-AD23-5F2D0D4A57CF}
 		{C1EE12E5-BE7A-415A-9097-872E962B4FAC} = {AF875A4C-8E32-49F7-9E0B-530DC5B15DC0}
 		{6BA76F01-4105-42F9-9882-12E7B82862CF} = {AF875A4C-8E32-49F7-9E0B-530DC5B15DC0}
 		{13571DCA-D03A-4E33-96F5-022EE41139FD} = {63114B6C-106B-4658-85B2-B6E899246233}
