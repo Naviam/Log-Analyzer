@@ -1,5 +1,6 @@
 ﻿namespace Naviam.DataAnalyzer.Services.WebApi.Controllers
 {
+    using System;
     using System.Net;
     using System.Net.Http;
     using System.Web.Http;
@@ -19,29 +20,19 @@
         }
 
         // GET api/datasource?id=880557C8E4FC4D199912CE215090DCBD
-        public HttpResponseMessage Get(string id)
+        public HttpResponseMessage Get(Guid id)
         {
-            var data = this._dataSourceService.GetDataSource(new GetDataSourceByIdRequest());
+            var data = this._dataSourceService.GetDataSource(new GetDataSourceByIdRequest { Id = id });
 
             if (data == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
-                /*
-                var notFoundMessage = new HttpResponseMessage(HttpStatusCode.NotFound);
-                notFoundMessage.Headers.Add("InternalError", "Users not found");
-                return notFoundMessage;
-                */
             }
 
             var newMessage = this.Request.CreateResponse<GetDataSourceByIdResponse>(HttpStatusCode.OK, data);
             return newMessage;
         }
 
-
-        public HttpResponseMessage Get(int accountId)
-        {
-            return null;
-        }
 
         // POST api/datasource
         public HttpResponseMessage Post([FromBody]object value)
