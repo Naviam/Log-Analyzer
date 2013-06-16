@@ -43,11 +43,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Repository.Fake", "Naviam.DataAnalyzer.Repository.Fake\Naviam.DataAnalyzer.Repository.Fake.csproj", "{6BA76F01-4105-42F9-9882-12E7B82862CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Infrastructure", "Naviam.DataAnalyzer.Infrastructure\Naviam.DataAnalyzer.Infrastructure.csproj", "{5F5E4C34-8A30-4C49-A20E-DA5ECA2177CC}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Services.Contracts", "Naviam.DataAnalyzer.Services.Contracts\Naviam.DataAnalyzer.Services.Contracts.csproj", "{404E97F5-D76E-4511-A47F-4FD1883AC3C0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Services.Messaging", "Naviam.DataAnalyzer.Services.Messaging\Naviam.DataAnalyzer.Services.Messaging.csproj", "{3BD66BB0-D942-440A-B356-FCBA1B6E20C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Services.Concrete", "Naviam.DataAnalyzer.Services.Concrete\Naviam.DataAnalyzer.Services.Concrete.csproj", "{8CFCCAEF-43AB-4842-9805-7D89282ECD8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naviam.DataAnalyzer.Prototype", "Naviam.DataAnalyzer.Prototype\Naviam.DataAnalyzer.Prototype.csproj", "{472E4762-93B3-4EF1-8E8A-D76B3B646289}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -115,6 +118,10 @@ Global
 		{8CFCCAEF-43AB-4842-9805-7D89282ECD8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CFCCAEF-43AB-4842-9805-7D89282ECD8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CFCCAEF-43AB-4842-9805-7D89282ECD8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{472E4762-93B3-4EF1-8E8A-D76B3B646289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{472E4762-93B3-4EF1-8E8A-D76B3B646289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{472E4762-93B3-4EF1-8E8A-D76B3B646289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{472E4762-93B3-4EF1-8E8A-D76B3B646289}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -127,6 +134,7 @@ Global
 		{8CFCCAEF-43AB-4842-9805-7D89282ECD8E} = {B5FCE8D9-AA47-4364-8405-1EEB9FB579F9}
 		{393B82CC-C795-4B59-95A1-CB49C55C52E0} = {0E719449-7CA2-473A-91CE-29425D7AB30D}
 		{1CD245B9-8B26-4614-B25F-77C702C8DE54} = {0E719449-7CA2-473A-91CE-29425D7AB30D}
+		{472E4762-93B3-4EF1-8E8A-D76B3B646289} = {0E719449-7CA2-473A-91CE-29425D7AB30D}
 		{887616C5-E881-468E-BB56-7E4C31991D9A} = {DA53EFAC-7E9C-4E55-A9E6-410CE0853831}
 		{B50AEE93-F3BD-43E9-BDFC-F2772A2723E1} = {DA53EFAC-7E9C-4E55-A9E6-410CE0853831}
 		{7D54FF56-94C5-4518-8057-422F4324009E} = {1EA214BD-4687-4418-AD23-5F2D0D4A57CF}

@@ -1,0 +1,308 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+    <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/bootstrap-responsive.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/dropdowns.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/docs.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet">
+</head>
+<body>
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="#">Project name</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>*@
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="#" class="brand" style="background: url(http://login.servicechannel.com/content/images/logos/1000.png) no-repeat"></a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li><a href="#">Track WO/PO</a></li>
+                        <li><a href="#">Service Requests</a></li>
+                        <li><a href="#">RFPs / Proposals</a></li>
+                        <li><a href="#">Invoices</a></li>
+                        <li><a href="#">WO Reports</a></li>
+                        <li class='active'><a href="#">Locations</a></li>
+                        <li class="dropdown" style="">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">more <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Admin</a></li>
+                                <li><a href="#">PMs</a></li>
+                                <li><a href="#">Equipment</a></li>
+                                <li><a href="#">Service Providers</a></li>
+                                <li><a target="_blank" href="https://app.fixxbook.com/Account/ConsumeOpenId?openId=http://login.servicechannel.com/openiduser/17491&amp;returnUrl=https://app.fixxbook.com/SysAdmin/MessagesDetails?showAlert=true">FixxbookPN</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" data-toggle="tooltip" data-placement="bottom" title="ServiceChannel Demo">
+                                <i class="icon-white icon-user"></i>ServiceChann...<b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://servicechannel.zendesk.com/" target="_blank">Help</a></li>
+                                <li><a href="#" onclick="logOut();return false;">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header class="jumbotron subhead" id="overview">
+            <div class="subnav subnav-fixed" id="navbar">
+                <ul class="nav nav-pills">
+                    <li class="logo-width">&nbsp;</li>
+                    <li><a href="#">Example 1</a></li>
+                    <li class="active"><a href="#">Example 2</a></li>
+                    <li><a href="#">Example 3</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+    @this.RenderBody()
+    <div id="navbar-example" class="navbar">
+        <div class="navbar-inner" style="margin-bottom:6px">
+            <div class="container">
+                <a class="brand" href="#" style="padding: 10px 10px 10px 20px;">Search for locations </a>
+                <ul class="nav">
+                    <button id="with" class="btn dropdown-toggle" data-toggle="dropdown">with <b class="caret"></b></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="with">
+                        <li>
+                            <input type="radio" id="ID1" name="NAME" value="1"><label for="ID1">with</label></li>
+                        <li>
+                            <input type="radio" id="ID2" name="NAME" value="2"><label for="ID2">without</label></li>
+                    </ul>
+                </ul>
+                <div class="input-prepend input-append" style="margin-top: 5px; margin-bottom: 0px">
+                    <div class="btn-group">
+                        <button id="searchby" class="btn dropdown-toggle" data-toggle="dropdown">
+                            Location ID
+                            <b class="caret"></b>
+                        </button>
+                        <ul class="dropdown-menu dropup" role="menu" aria-labelledby="searchby">
+                            <li><input type="radio" id="searchby0" name="searchby" value="0"><label for="searchby0">Location ID</label></li>
+                            <li><input type="radio" id="searchby1" name="searchby" value="1"><label for="searchby1">Name</label></li>
+                            <li><input type="radio" id="searchby2" name="searchby" value="2"><label for="searchby2">Region</label></li>
+                            <li><input type="radio" id="searchby3" name="searchby" value="3"><label for="searchby3">District</label></li>
+                            <li><input type="radio" id="searchby4" name="searchby" value="4"><label for="searchby4">City</label></li>
+                            <li><input type="radio" id="searchby5" name="searchby" value="5"><label for="searchby5">State</label></li>
+                            <li><input type="radio" id="searchby6" name="searchby" value="6"><label for="searchby6">Country</label></li>
+                            <li><input type="radio" id="searchby7" name="searchby" value="7"><label for="searchby7">Trade</label></li>
+                            <li><input type="radio" id="searchby8" name="searchby" value="8"><label for="searchby8">Provider</label></li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#">Location Notes</a>
+                                <ul class="dropdown-menu">
+                                    <li><input type="radio" id="searchby9" name="searchby" value="9"><label for="searchby9">District Manager</label></li>
+                                    <li><input type="radio" id="searchby10" name="searchby" value="10"><label for="searchby10">Facility Manager</label></li>
+                                    <li><input type="radio" id="searchby11" name="searchby" value="11"><label for="searchby11">Brand</label></li>
+                                    <li><input type="radio" id="searchby12" name="searchby" value="12"><label for="searchby12">Sq Ft</label></li>
+                                    <li><input type="radio" id="searchby13" name="searchby" value="13"><label for="searchby13">Facility Number</label></li>
+                                    <li><input type="radio" id="searchby14" name="searchby" value="14"><label for="searchby14">Test Header</label></li>
+                                    <li><input type="radio" id="searchby15" name="searchby" value="15"><label for="searchby15">Facility Manager E-Mail</label></li>
+                                    <li><input type="radio" id="searchby16" name="searchby" value="16"><label for="searchby16">Station Number</label></li>
+                                    <li><input type="radio" id="searchby17" name="searchby" value="17"><label for="searchby17">District Manager Phone</label></li>
+                                    <li><input type="radio" id="searchby18" name="searchby" value="18"><label for="searchby18">Landlord Responsibility</label></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <input class="span4" id="appendedInputButton" type="text">
+                    <div class="btn-group">
+                        <button class="btn btn-info">Search</button>
+                        <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="nav-header">My Saved Searches</li>
+                            <li><a tabindex="-1" href="#">Search 1</a></li>
+                            <li><a tabindex="-1" href="#">Search 2</a></li>
+                            <li><a tabindex="-1" href="#">Search 3</a></li>
+                            <li><a tabindex="-1" href="#">Search 4</a></li>
+                            <li><a tabindex="-1" href="#">Search 5</a></li>
+                            <li><a tabindex="-1" href="#">Search 6</a></li>
+                            <li><a tabindex="-1" href="#">Search 7</a></li>
+                            <li><a tabindex="-1" href="#">Search 8</a></li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#">Group 1</a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#">Search 9</a></li>
+                                    <li><a tabindex="-1" href="#">Search 10</a></li>
+                                    <li><a tabindex="-1" href="#">Search 11</a></li>
+                                </ul>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a tabindex="-1" href="#">Manage Saved Searches</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button data-toggle="tooltip" title="" data-placement="right" data-original-title="Click for advance search" class="btn btn-link">Advanced</button>
+                </div>
+            </div>
+        </div>
+        <div class="pull-left filter-plus">
+            <div data-toggle="tooltip" title="" data-placement="right" data-original-title="Included Criterias" class="filter_view filter-view-plus-header">
+                <i class="icon-plus icon-white"></i>
+            </div>
+            <div class="filter_view">
+                <div data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove All Location ID Criterias" class="btn_close">
+                    <a href="#">&times;</a>
+                </div>
+                <b>Location ID:</b>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove Location ID Criteria"><label>00100</label> <span>&times;</span></a>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove Location ID Criteria"><label>106</label> <span>&times;</span></a>
+            </div>
+            <div class="filter_view">
+                <div data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove All Region Criterias" class="btn_close">
+                    <a href="#">&times;</a>
+                </div>
+                <b>Region:</b>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove Region Criteria"><label>1</label> <span onclick="return removeFilterElement(this);">&times;</span></a>
+            </div>
+            <div class="filter_view">
+                <div data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove All State Criterias" class="btn_close">
+                    <a href="#">&times;</a>
+                </div>
+                <b>State:</b>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove State Criteria"><label>NY</label> <span onclick="return removeFilterElement(this);">&times;</span></a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="pull-left filter-minus">
+            <div data-toggle="tooltip" title="" data-placement="right" data-original-title="Excluded Criterias" class="filter_view filter-view-minus-header">
+                <i class="icon-minus icon-white"></i>
+            </div>
+            <div class="filter_view">
+                <div data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove All Trade Criterias" class="btn_close">
+                    <a href="#">&times;</a>
+                </div>
+                <b>Trade:</b>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove Trade Criteria"><label>HVAC</label> <span>&times;</span></a>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove Trade Criteria"><label>DOORS</label> <span>&times;</span></a>
+            </div>
+            <div class="filter_view">
+                <div data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove All Provider Criterias" class="btn_close">
+                    <a href="#">&times;</a>
+                </div>
+                <b>Provider:</b>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove Provider Criteria"><label>Brinco</label> <span>&times;</span></a>
+            </div>
+            <div class="filter_view">
+                <div data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove All State Criterias" class="btn_close">
+                    <a href="#">&times;</a>
+                </div>
+                <b>State:</b>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove State Criteria"><label>NJ</label> <span>&times;</span></a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        @*<button class="btn btn-link">Save</button>*@
+        <!--<div>
+            <button class="btn btn-info">(Un)Assign Provider</button>
+            <button class="btn">Export</button>
+            <button class="btn btn-info pull-right">Add Location</button>
+        </div>-->
+        
+        <!--
+        
+        <table id="locationsTable" class="table table-bordered table-striped">
+                <thead>
+                    <tr class="success">
+                        <th>Location ID</th>
+                        <th>Name</th>
+                        <th>Region</th>
+                        <th>District</th>
+                        <th>City</th>
+                        <th>State/Province</th>
+                        <th>Country</th>
+                        <th>Open Date</th>
+                        <th>Close Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Full name</td>
+                        <td>region</td>
+                        <td>district</td>
+                        <td>city</td>
+                        <td>state</td>
+                        <td>country</td>
+                        <td>12-12-2010</td>
+                        <td>12-12-2011</td>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn btn-mini btn-info">Info</button>
+                                <button class="btn btn-mini btn-info dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#">Info</a></li>
+                                    <li><a tabindex="-1" href="#">Notes</a></li>
+                                    <li><a tabindex="-1" href="#">Wiki</a></li>
+                                    <li><a tabindex="-1" href="#">Attachments</a></li>
+                                    <li><a tabindex="-1" href="#">Trades</a></li>
+                                    <li><a tabindex="-1" href="#">Maps</a></li>
+                                    <li class="divider"></li>
+                                    <li><a tabindex="-1" href="#">Copy Relations</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>-->
+        <!--<p>
+            Has: 
+          <button class="btn btn-mini btn-primary" type="button">Large button</button>
+          <button class="btn btn-mini" type="button">Large button</button>
+        </p>-->
+    <!--<pre class="prettyprint">
+            <span class="badge">Success</span>&nbsp;<span class="label label-success">Success</span><span class="label label-success">Success</span>
+        </pre>-->
+        </div>
+    <script src="@Url.Content("~/Scripts/jquery-2.0.2.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap/bootstrap-affix.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap/bootstrap-alert.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap/bootstrap-button.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap/bootstrap-popover.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap/bootstrap-tooltip.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap/bootstrap-transition.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap/bootstrap-typeahead.js")"></script>
+    <script src="@Url.Content("~/Scripts/dropdown.js")"></script>
+    <script language="javascript">
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</body>
+</html>
