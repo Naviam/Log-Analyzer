@@ -7,27 +7,27 @@
 
     public class DataSourceRepository : IDataSourceRepository
     {
-        public DataSource GetDataSource(string id)
+        public DataSource GetDataSource(string id, string accountId)
         {
             throw new NotImplementedException();
         }
 
-        public List<DataSource> GetDataSources(int userId)
+        public IEnumerable<DataSource> GetDataSources(string accountId)
         {
             throw new NotImplementedException();
         }
 
-        public string AddDataSource(DataSource dataSource, int accountId)
+        public string AddDataSource(DataSource dataSource, string accountId)
         {
             throw new NotImplementedException();
         }
 
-        public DataSource UpdateDataSource(DataSource dataSource)
+        public DataSource UpdateDataSource(DataSource dataSource, string accountId)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteDataSource(string id)
+        public void DeleteDataSource(string id, string accountId)
         {
             throw new NotImplementedException();
         }

@@ -1,18 +1,17 @@
 ﻿namespace Naviam.DataAnalyzer.Model.DataSource
 {
-    using System;
     using System.Collections.Generic;
 
     public interface IDataSourceRepository
     {
-        DataSource GetDataSource(string id);
+        DataSource GetDataSource(string id, string accountId);
 
-        List<DataSource> GetDataSources(int accountId);
+        IEnumerable<DataSource> GetDataSources(string accountId);
 
-        string AddDataSource(DataSource dataSource, int accountId);
+        string AddDataSource(DataSource dataSource, string accountId);
 
-        DataSource UpdateDataSource(DataSource dataSource);
+        DataSource UpdateDataSource(DataSource dataSource, string accountId);
 
-        void DeleteDataSource(string id);
+        void DeleteDataSource(string id, string accountId);
     }
 }

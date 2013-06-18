@@ -1,35 +1,64 @@
 ﻿namespace Naviam.DataAnalyzer.Repository.DynamoDb
 {
-    using System;
     using System.Collections.Generic;
+    using System.Linq;
+
+    using Amazon.DynamoDBv2.DocumentModel;
+
+    using AutoMapper;
 
     using Naviam.DataAnalyzer.Model.DataSource;
+    using DynamoDb = Naviam.DataAnalyzer.Repository.DynamoDb.Model;
 
-    public class DataSourceRepository : IDataSourceRepository
+    public class DataSourceRepository : DynamoDbRepository, IDataSourceRepository
     {
-        public DataSource GetDataSource(string id)
+        public DataSourceRepository()
         {
-            throw new NotImplementedException();
+            Mapper.CreateMap<DataSource, DynamoDb.DataSource>();
+            Mapper.CreateMap<DynamoDb.DataSource, DataSource>();
         }
 
-        public List<DataSource> GetDataSources(int accountId)
+        public DataSource GetDataSource(string id, string accountId)
         {
-            throw new NotImplementedException();
+            var ds = this.Context.Query<DynamoDb.DataSource>(accountId, QueryOperator.Equal, id).ToList();
+            if (ds.Count > 0)
+            {
+                return Mapper.Map<DynamoDb.DataSource, DataSource>(ds[0]);
+            }
+            return null;
         }
 
-        public string AddDataSource(DataSource dataSource, int accountId)
+        public IEnumerable<DataSource> GetDataSources(string accountId)
         {
-            throw new NotImplementedException();
+            var res = this.Context.Query<DynamoDb.DataSource>(accountId).ToList();
+            var val = res.Select(Mapper.Map<DynamoDb.DataSource, DataSource>).ToList();
+            return val;
         }
 
-        public DataSource UpdateDataSource(DataSource dataSource)
+        public string AddDataSource(DataSource dataSource, string accountId)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(dataSource.Id))
+            {
+                dataSource.Id = GetNewKey();
+            }
+            var ds = Mapper.Map<DataSource, DynamoDb.DataSource>(dataSource);
+            ds.AccountId = accountId;
+            this.Context.Save(ds);
+            return dataSource.Id;
         }
 
-        public void DeleteDataSource(string id)
+        public DataSource UpdateDataSource(DataSource dataSource, string accountId)
         {
-            throw new NotImplementedException();
+            var ds = this.Context.Load<DynamoDb.DataSource>(accountId, dataSource.Id);
+            ds.DataSourceType = (int)dataSource.DataSourceType;
+            ds.Name = dataSource.Name;
+            this.Context.Save(ds);
+            return dataSource;
+        }
+
+        public void DeleteDataSource(string id, string accountId)
+        {
+            this.Context.Delete<DynamoDb.DataSource>(accountId, id);
         }
     }
 }

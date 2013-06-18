@@ -37,6 +37,7 @@
       <HintPath>..\packages\AWSSDK.1.5.18.0\lib\AWSSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,9 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Amazon\AmazonClient.cs" />
     <Compile Include="Amazon\DynamoDbClient.cs" />
-    <Compile Include="Amazon\IAmazonConfigurable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

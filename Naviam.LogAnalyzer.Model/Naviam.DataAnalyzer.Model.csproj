@@ -40,14 +40,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\Account.cs" />
+    <Compile Include="Account\IAccountRepository.cs" />
     <Compile Include="DataSource\Column.cs" />
     <Compile Include="DataSource\DataSource.cs" />
+    <Compile Include="DataSource\DataSourceTypes.cs" />
     <Compile Include="DataSource\DateColumn.cs" />
     <Compile Include="DataSource\IDataSourceRepository.cs" />
     <Compile Include="DataSource\IHub.cs" />
     <Compile Include="DataSource\IntColumn.cs" />
     <Compile Include="DataSource\ISubscriber.cs" />
     <Compile Include="DataSource\MapInfo.cs" />
+    <Compile Include="DataSource\PropertyTypes.cs" />
     <Compile Include="DataSource\Record.cs" />
     <Compile Include="DataSource\StringColumn.cs" />
     <Compile Include="Filter\CompareOperations.cs" />
