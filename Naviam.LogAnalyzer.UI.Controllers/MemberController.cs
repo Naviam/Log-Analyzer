@@ -13,5 +13,9 @@ namespace Naviam.DataAnalyzer.UI.Controllers
         {
             return this.View();
         }
+        public ActionResult View1()
+        {
+            return this.View();
+        }
     }
 }

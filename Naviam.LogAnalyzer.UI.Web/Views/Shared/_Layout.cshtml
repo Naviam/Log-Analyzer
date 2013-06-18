@@ -1,34 +1,19 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title>@ViewBag.Title - Naviam Data Analyzer</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-</head>
-<body>
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Naviam Data Analyzer</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
     <header>
-        <div id="topmenu" class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container-fluid">
-                    <a class="brand" href="#">RTA</a>
-                    <div class="nav-collapse">
-                        <ul class="nav nav-pills">
-                            <li class="active"><a href="#" title="Dashboard">Dashboard</a></li>
-                            <li><a href="#" title="Setings">Settings</a></li>
-                        </ul>
-                        <ul class="nav pull-right">
-                            <li><a href="#" title="Log Out">Log Out</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+        
     </header>
+<body>
     <div id="body">
         <div class="container-fluid">
             @RenderBody()
+             
         </div>
     </div>
     <footer>
@@ -38,9 +23,10 @@
             </div>
         </div>
     </footer>
-    
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/dropdown")
 
     @RenderSection("scripts", required: false)
 </body>

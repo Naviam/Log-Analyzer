@@ -4,6 +4,28 @@
 }
 
 <h2>Dashboard</h2>
+<div id="topmenu" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#">RTA</a>
+            <div class="nav-collapse">
+                <ul class="nav nav-pills">
+                    <li  class="active"><a href="#MyTwits" data-toggle="tab" title="My Twits">My Twits</a></li>
+                    <li><a data-toggle="tab" href="#ScLogs" title="ServiceChannel Errors">ServiceChannel Errors</a></li>
+                    
+                </ul>
+                <ul class="nav pull-right">
+                    <li >
+                        <a href="#addRestDataSourceModdalWindow" data-toggle="modal">Add Datasource</a>
+                       
+                    </li>
+                    <li><a href="#" title="Log Out">Log Out</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
 <div class="pull-left">
     @*Frequency:
     <select>
@@ -12,15 +34,15 @@
         <option>3 min</option>
         <option>4 min</option>
         <option>5 min</option>
-    </select>*@
+    </select>
     Show last:
     <select>
         <option>10</option>
         <option>50</option>
         <option>100</option>
     </select>
-</div>
-<ul class="nav nav-pills pull-right">
+</div>*@
+@*<ul class="nav nav-pills pull-right">
 
     <li>
         <button type="button" class="btn btn-primary">Add Allert</button></li>
@@ -30,39 +52,15 @@
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Add DataSource<b class="caret"></b></button>
         <ul class="dropdown-menu" role="menu">
             <li><a href="#addRestDataSourceModdalWindow" role="menuitem" data-toggle="modal">HTTP/REST</a></li>
-            <li><a href="#addRestDataSourceModdalWindow" role="menuitem" data-toggle="modal">SOAP</a></li>
         </ul>
     </li>
-</ul>
-<br />
-<br />
+</ul>*@
 
-<a href="#" id="filterAnchor" >Manage filters</a>
-@{ Html.RenderPartial("_dashboardDataFilters");}
 @{ Html.RenderPartial("_addRestDataSource");}
-<br />
-<br />
-<ul class="nav nav-tabs">
-    <li class="active"><a href="#ScLogs" data-toggle="tab">ServiceChannel Errors</a></li>
-    <li><a href="#MyTwits" data-toggle="tab">My Twits</a></li>
-</ul>
+
 <div class="tab-content">
-    <div class="tab-pane active" id="ScLogs">
-        <b>Datasource ID: 32B08481-9298-48C6-AFCF-644B5A2CC5A3</b><br />
-        <input type="text" id="dsId" />
-        <input type="button" value="Open Connection" id="btnOpnCon"/>
-        <table id="tbContent" class="table table-condensed">
-            <tr>
-                <th>Key</th>
-                <th>Message</th>
-                <th>Exception</th>
-                <th>Level</th>
-                <th>Date</th>
-            </tr>
-        </table>
-        Total Records: <b>4</b>
-    </div>
-    <div class="tab-pane" id="MyTwits">
+    <div class="tab-pane active" id="MyTwits">
+        @{ Html.RenderPartial("_dashboardDataFiltersAlt");}
         <table class="table table-condensed">
             <tr>
                 <th>Date</th>
@@ -114,32 +112,50 @@
         </table>
         Total Records: <b>5</b>
     </div>
+    <div class="tab-pane " id="ScLogs">
+        <a href="#" id="filterAnchor">Manage filters</a>
+        @{ Html.RenderPartial("_dashboardDataFilters");}<br />
+        <b>Datasource ID: 32B08481-9298-48C6-AFCF-644B5A2CC5A3</b><br />
+        <input type="text" id="dsId" />
+        <input type="button" value="Open Connection" id="btnOpnCon" />
+        <table id="tbContent" class="table table-condensed">
+            <tr>
+                <th>Key</th>
+                <th>Message</th>
+                <th>Exception</th>
+                <th>Level</th>
+                <th>Date</th>
+            </tr>
+        </table>
+        Total Records: <b>4</b>
+    </div>
+    
 </div>
 @section Scripts
 {
 
     @Scripts.Render("~/Scripts/jquery.signalR-1.1.2.min.js")
-   <script type="text/javascript">
-       $(document).ready(function () {
-           $('#filterAnchor').popover({
-               placement: 'bottom',
-               title: 'Add new filter',
-               content: $("#filterPanel").html(),
-               html:true,
-               trigger: 'click'
-           });
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#filterAnchor').popover({
+                placement: 'bottom',
+                title: 'Add new filter',
+                content: $("#filterPanel").html(),
+                html: true,
+                trigger: 'click'
+            });
 
-               //.attr("data-content", $("#filterPanel").html());
+            //.attr("data-content", $("#filterPanel").html());
 
-           $("#btnOpnCon").click(function () {
-               var connection = $.connection('/datasource', "dataSourceId=" + $("#dsId").val(), true);
-              
-               connection.start().done(function () {
-                   connection.received(function (data) {
-                       $('#tbContent tr:last').after('<tr><td>'+data.Key+'</td><td>'+data.Message+'</td><td>'+data.Exception+'</td><td>'+data.Level+'</td><td>'+data.Date+'</td></tr>');
-                   });
-               });
-           });
-       });
+            $("#btnOpnCon").click(function () {
+                var connection = $.connection('/datasource', "dataSourceId=" + $("#dsId").val(), true);
+
+                connection.start().done(function () {
+                    connection.received(function (data) {
+                        $('#tbContent tr:last').after('<tr><td>' + data.Key + '</td><td>' + data.Message + '</td><td>' + data.Exception + '</td><td>' + data.Level + '</td><td>' + data.Date + '</td></tr>');
+                    });
+                });
+            });
+        });
     </script>
 }
