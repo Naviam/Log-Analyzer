@@ -2,5 +2,144 @@
 
 @{
     ViewBag.Title = "Prototype";
-    Layout = "../Shared/_LayoutOneColumn.cshtml";
+    Layout = "../Shared/_LayoutWithNavBar.cshtml";
+}
+
+@section SearchBar
+{
+    <div id="navbar-example" class="navbar">
+        <div class="navbar-inner" style="margin-bottom:6px">
+            <div class="container">
+                <a class="brand" href="#" style="padding: 10px 10px 10px 20px;">Search for locations </a>
+                <ul class="nav">
+                    <button id="with" class="btn dropdown-toggle" data-toggle="dropdown">with <b class="caret"></b></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="with">
+                        <li><input type="radio" id="ID1" name="NAME" value="1"><label for="ID1">with</label></li>
+                        <li><input type="radio" id="ID2" name="NAME" value="2"><label for="ID2">without</label></li>
+                    </ul>
+                </ul>
+                <div class="input-prepend input-append" style="margin-top: 5px; margin-bottom: 0px">
+                    <div class="btn-group">
+                        <button id="searchby" class="btn dropdown-toggle" data-toggle="dropdown">
+                            Location ID
+                            <b class="caret"></b>
+                        </button>
+                        <ul class="dropdown-menu dropup" role="menu" aria-labelledby="searchby">
+                            <li><input type="radio" id="searchby0" name="searchby" value="0"><label for="searchby0">Location ID</label></li>
+                            <li><input type="radio" id="searchby1" name="searchby" value="1"><label for="searchby1">Name</label></li>
+                            <li><input type="radio" id="searchby2" name="searchby" value="2"><label for="searchby2">Region</label></li>
+                            <li><input type="radio" id="searchby3" name="searchby" value="3"><label for="searchby3">District</label></li>
+                            <li><input type="radio" id="searchby4" name="searchby" value="4"><label for="searchby4">City</label></li>
+                            <li><input type="radio" id="searchby5" name="searchby" value="5"><label for="searchby5">State</label></li>
+                            <li><input type="radio" id="searchby6" name="searchby" value="6"><label for="searchby6">Country</label></li>
+                            <li><input type="radio" id="searchby7" name="searchby" value="7"><label for="searchby7">Trade</label></li>
+                            <li><input type="radio" id="searchby8" name="searchby" value="8"><label for="searchby8">Provider</label></li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#">Location Notes</a>
+                                <ul class="dropdown-menu">
+                                    <li><input type="radio" id="searchby9" name="searchby" value="9"><label for="searchby9">District Manager</label></li>
+                                    <li><input type="radio" id="searchby10" name="searchby" value="10"><label for="searchby10">Facility Manager</label></li>
+                                    <li><input type="radio" id="searchby11" name="searchby" value="11"><label for="searchby11">Brand</label></li>
+                                    <li><input type="radio" id="searchby12" name="searchby" value="12"><label for="searchby12">Sq Ft</label></li>
+                                    <li><input type="radio" id="searchby13" name="searchby" value="13"><label for="searchby13">Facility Number</label></li>
+                                    <li><input type="radio" id="searchby14" name="searchby" value="14"><label for="searchby14">Test Header</label></li>
+                                    <li><input type="radio" id="searchby15" name="searchby" value="15"><label for="searchby15">Facility Manager E-Mail</label></li>
+                                    <li><input type="radio" id="searchby16" name="searchby" value="16"><label for="searchby16">Station Number</label></li>
+                                    <li><input type="radio" id="searchby17" name="searchby" value="17"><label for="searchby17">District Manager Phone</label></li>
+                                    <li><input type="radio" id="searchby18" name="searchby" value="18"><label for="searchby18">Landlord Responsibility</label></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <input class="span4" id="appendedInputButton" type="text">
+                    <div class="btn-group">
+                        <button class="btn btn-info">Search</button>
+                        <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="nav-header">My Saved Searches</li>
+                            <li><a tabindex="-1" href="#">Search 1</a></li>
+                            <li><a tabindex="-1" href="#">Search 2</a></li>
+                            <li><a tabindex="-1" href="#">Search 3</a></li>
+                            <li><a tabindex="-1" href="#">Search 4</a></li>
+                            <li><a tabindex="-1" href="#">Search 5</a></li>
+                            <li><a tabindex="-1" href="#">Search 6</a></li>
+                            <li><a tabindex="-1" href="#">Search 7</a></li>
+                            <li><a tabindex="-1" href="#">Search 8</a></li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#">Group 1</a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#">Search 9</a></li>
+                                    <li><a tabindex="-1" href="#">Search 10</a></li>
+                                    <li><a tabindex="-1" href="#">Search 11</a></li>
+                                </ul>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a tabindex="-1" href="#">Manage Saved Searches</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="@Url.Action("AdvancedSearch")" data-toggle="tooltip" title="" data-placement="top" data-original-title="Advance Search" class="btn btn-link">Advanced</a>
+                </div>
+            </div>
+        </div>
+        <div class="pull-left filter-plus">
+            <div data-toggle="tooltip" title="" data-placement="right" data-original-title="Included Criterias" class="filter_view filter-view-plus-header">
+                <i class="icon-plus icon-white"></i>
+            </div>
+            <div class="filter_view">
+                <div data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove All Location ID Criterias" class="btn_close">
+                    <a href="#">&times;</a>
+                </div>
+                <b>Location ID:</b>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove Location ID Criteria"><label>00100</label> <span>&times;</span></a>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove Location ID Criteria"><label>106</label> <span>&times;</span></a>
+            </div>
+            <div class="filter_view">
+                <div data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove All Region Criterias" class="btn_close">
+                    <a href="#">&times;</a>
+                </div>
+                <b>Region:</b>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove Region Criteria"><label>1</label> <span onclick="return removeFilterElement(this);">&times;</span></a>
+            </div>
+            <div class="filter_view">
+                <div data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove All State Criterias" class="btn_close">
+                    <a href="#">&times;</a>
+                </div>
+                <b>State:</b>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove State Criteria"><label>NY</label> <span onclick="return removeFilterElement(this);">&times;</span></a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="pull-left filter-minus">
+            <div data-toggle="tooltip" title="" data-placement="right" data-original-title="Excluded Criterias" class="filter_view filter-view-minus-header">
+                <i class="icon-minus icon-white"></i>
+            </div>
+            <div class="filter_view">
+                <div data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove All Trade Criterias" class="btn_close">
+                    <a href="#">&times;</a>
+                </div>
+                <b>Trade:</b>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove Trade Criteria"><label>HVAC</label> <span>&times;</span></a>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove Trade Criteria"><label>DOORS</label> <span>&times;</span></a>
+            </div>
+            <div class="filter_view">
+                <div data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove All Provider Criterias" class="btn_close">
+                    <a href="#">&times;</a>
+                </div>
+                <b>Provider:</b>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove Provider Criteria"><label>Brinco</label> <span>&times;</span></a>
+            </div>
+            <div class="filter_view">
+                <div data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove All State Criterias" class="btn_close">
+                    <a href="#">&times;</a>
+                </div>
+                <b>State:</b>
+                <a data-toggle="tooltip" title="" data-placement="top" data-original-title="Remove State Criteria"><label>NJ</label> <span>&times;</span></a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
 }

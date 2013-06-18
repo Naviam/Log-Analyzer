@@ -26,5 +26,16 @@ namespace Naviam.DataAnalyzer.Prototype.Controllers
         {
             return this.View();
         }
+
+        /// <summary>
+        /// The advanced search.
+        /// </summary>
+        /// <returns>
+        /// The <see cref="ActionResult"/>.
+        /// </returns>
+        public ActionResult AdvancedSearch()
+        {
+            return this.View();
+        }
     }
 }

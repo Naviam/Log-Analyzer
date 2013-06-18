@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "_LayoutWithNavBar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles
+{
+    @this.RenderSection("Styles", false)
+}
+
+@section NavigationBar
+{
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="#" class="brand" style="background: url(http://login.servicechannel.com/content/images/logos/1000.png) no-repeat"></a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li><a href="#">Track WO/PO</a></li>
+                        <li><a href="#">Service Requests</a></li>
+                        <li><a href="#">RFPs / Proposals</a></li>
+                        <li><a href="#">Invoices</a></li>
+                        <li><a href="#">WO Reports</a></li>
+                        <li class='active'><a href="#">Locations</a></li>
+                        <li class="dropdown" style="">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">more <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Admin</a></li>
+                                <li><a href="#">PMs</a></li>
+                                <li><a href="#">Equipment</a></li>
+                                <li><a href="#">Service Providers</a></li>
+                                <li><a target="_blank" href="https://app.fixxbook.com/Account/ConsumeOpenId?openId=http://login.servicechannel.com/openiduser/17491&amp;returnUrl=https://app.fixxbook.com/SysAdmin/MessagesDetails?showAlert=true">FixxbookPN</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" data-toggle="tooltip" data-placement="bottom" title="ServiceChannel Demo">
+                                <i class="icon-white icon-user"></i>ServiceChann...<b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://servicechannel.zendesk.com/" target="_blank">Help</a></li>
+                                <li><a href="#" onclick="logOut();return false;">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header class="jumbotron subhead" id="overview">
+            <div class="subnav subnav-fixed" id="navbar">
+                <ul class="nav nav-pills">
+                    <li class="logo-width">&nbsp;</li>
+                    <li><a href="#">Example 1</a></li>
+                    <li class="active"><a href="#">Example 2</a></li>
+                    <li><a href="#">Example 3</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+}
+
+@section SearchBar
+{
+    @RenderSection("SearchBar", false)
+}
+
+@this.RenderBody()
+
+@section Scripts
+{
+    @this.RenderSection("Scripts", false)
+}
