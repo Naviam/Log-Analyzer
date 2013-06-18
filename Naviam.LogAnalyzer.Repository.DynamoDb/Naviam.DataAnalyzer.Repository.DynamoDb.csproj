@@ -35,6 +35,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=2.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.2.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="AWSSDK">
       <HintPath>..\packages\AWSSDK.1.5.18.0\lib\AWSSDK.dll</HintPath>
     </Reference>
@@ -47,11 +51,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountRepository.cs" />
     <Compile Include="DataSourceRepository.cs" />
+    <Compile Include="DynamoDbRepository.cs" />
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\DataSource.cs" />
+    <Compile Include="Model\Filter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchemaGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Naviam.DataAnalyzer.Infrastructure\Naviam.DataAnalyzer.Infrastructure.csproj">
+      <Project>{5F5E4C34-8A30-4C49-A20E-DA5ECA2177CC}</Project>
+      <Name>Naviam.DataAnalyzer.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Naviam.LogAnalyzer.Model\Naviam.DataAnalyzer.Model.csproj">
       <Project>{13571dca-d03a-4e33-96f5-022ee41139fd}</Project>
       <Name>Naviam.DataAnalyzer.Model</Name>
