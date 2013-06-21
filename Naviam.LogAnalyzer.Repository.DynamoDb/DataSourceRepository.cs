@@ -2,8 +2,7 @@
 {
     using System.Collections.Generic;
     using System.Linq;
-
-    using Amazon.DynamoDBv2.DocumentModel;
+    using System.Web.Helpers;
 
     using AutoMapper;
 
@@ -14,18 +13,16 @@
     {
         public DataSourceRepository()
         {
-            Mapper.CreateMap<DataSource, DynamoDb.DataSource>();
-            Mapper.CreateMap<DynamoDb.DataSource, DataSource>();
+            Mapper.CreateMap<DataSource, DynamoDb.DataSource>()
+                  .ForMember(x => x.Map, m => m.MapFrom(q => Json.Encode(q.Map)));
+            Mapper.CreateMap<DynamoDb.DataSource, DataSource>()
+                  .ForMember(x => x.Map, m => m.MapFrom(q => Json.Decode(q.Map, typeof(IEnumerable<MapInfo>)))); 
         }
 
         public DataSource GetDataSource(string id, string accountId)
         {
-            var ds = this.Context.Query<DynamoDb.DataSource>(accountId, QueryOperator.Equal, id).ToList();
-            if (ds.Count > 0)
-            {
-                return Mapper.Map<DynamoDb.DataSource, DataSource>(ds[0]);
-            }
-            return null;
+            var result = this.Context.Load<DynamoDb.DataSource>(accountId, id, null);
+            return Mapper.Map<DynamoDb.DataSource, DataSource>(result);
         }
 
         public IEnumerable<DataSource> GetDataSources(string accountId)
@@ -49,9 +46,8 @@
 
         public DataSource UpdateDataSource(DataSource dataSource, string accountId)
         {
-            var ds = this.Context.Load<DynamoDb.DataSource>(accountId, dataSource.Id);
-            ds.DataSourceType = (int)dataSource.DataSourceType;
-            ds.Name = dataSource.Name;
+            var ds = Mapper.Map<DataSource, DynamoDb.DataSource>(dataSource);
+            ds.AccountId = accountId;
             this.Context.Save(ds);
             return dataSource;
         }
