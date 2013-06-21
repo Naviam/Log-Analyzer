@@ -11,7 +11,7 @@
   <Class Name="Naviam.DataAnalyzer.Model.DataSource.DataSource">
     <Position X="0.5" Y="5.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAABAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACEAAAABAAAAAAAIAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DataSource\DataSource.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -99,6 +99,13 @@
       <FileName>Filter\IFiltrableColumn.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="Naviam.DataAnalyzer.Model.Account.IAccountRepository" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAQAAAAAAAAAAAAAACAUAAAAA=</HashCode>
+      <FileName>Account\IAccountRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Enum Name="Naviam.DataAnalyzer.Model.DataSource.Operations" Collapsed="true">
     <Position X="9.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
@@ -111,6 +118,20 @@
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
       <FileName>Filter\CompareOperations.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Naviam.DataAnalyzer.Model.DataSource.DataSourceTypes" Collapsed="true">
+    <Position X="9.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>DataSource\DataSourceTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Naviam.DataAnalyzer.Model.DataSource.PropertyTypes" Collapsed="true">
+    <Position X="9.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQEAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>DataSource\PropertyTypes.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />
