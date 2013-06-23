@@ -11,14 +11,6 @@
 
     public class DataSourceRepository : DynamoDbRepository, IDataSourceRepository
     {
-        public DataSourceRepository()
-        {
-            Mapper.CreateMap<DataSource, DynamoDb.DataSource>()
-                  .ForMember(x => x.Map, m => m.MapFrom(q => Json.Encode(q.Map)));
-            Mapper.CreateMap<DynamoDb.DataSource, DataSource>()
-                  .ForMember(x => x.Map, m => m.MapFrom(q => Json.Decode(q.Map, typeof(IEnumerable<MapInfo>)))); 
-        }
-
         public DataSource GetDataSource(string id, string accountId)
         {
             var result = this.Context.Load<DynamoDb.DataSource>(accountId, id, null);
