@@ -1,34 +1,57 @@
 ﻿namespace Naviam.DataAnalyzer.Repository.DynamoDb
 {
-    using System.Collections.Generic;
+    using System;
+    using System.Linq;
+
+    using AutoMapper;
 
     using Naviam.DataAnalyzer.Model.Account;
+    using Naviam.DataAnalyzer.Model.DataSource;
 
-    public class AccountRepository : DynamoDbRepository, IAccountRepository 
+    using DynamoDb = Naviam.DataAnalyzer.Repository.DynamoDb.Model;
+
+    public class AccountRepository : DynamoDbRepository, IAccountRepository
     {
-        public IEnumerable<Account> GetAccounts()
+        public Account GetAccount(string email)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public Account GetAccount(string accountId)
-        {
-            throw new System.NotImplementedException();
+            var account = Mapper.Map<DynamoDb.Account, Account>(this.Context.Load<DynamoDb.Account>(email));
+            if (account != null)
+            {
+                account.DataSources =
+                    this.Context.Query<DynamoDb.DataSource>(email)
+                        .Select(Mapper.Map<DynamoDb.DataSource, DataSource>)
+                        .ToList();
+            }
+            return account;
         }
 
         public string AddAccount(Account account)
         {
-            throw new System.NotImplementedException();
+            if (string.IsNullOrEmpty(account.Email))
+            {
+                // TODO: make own exceptions
+                throw new Exception("email should not be null!");
+            }
+            var acc = Mapper.Map<Account, DynamoDb.Account>(account);
+            this.Context.Save(acc);
+            return account.Email;
         }
 
         public Account UpdateAccount(Account account)
         {
-            throw new System.NotImplementedException();
+            var acc = Mapper.Map<Account, DynamoDb.Account>(account);
+            this.Context.Save(acc);
+            return account;
         }
 
-        public void DeleteAccount(string accountId)
+        public void DeleteAccount(string email, bool deleteCascade = false)
         {
-            throw new System.NotImplementedException();
+            this.Context.Delete<DynamoDb.Account>(email);
+
+            if (deleteCascade)
+            {
+                this.Context.Delete<DynamoDb.DataSource>(email);
+            }
         }
     }
 }

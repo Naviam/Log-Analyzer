@@ -73,6 +73,11 @@
             return client.ListTables(new ListTablesRequest()).ListTablesResult.TableNames;
         }
 
+        public QueryResponse Query(QueryRequest request)
+        {
+            return client.Query(request);
+        }
+
         public void Dispose()
         {
             client.Dispose();

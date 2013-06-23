@@ -1,6 +1,5 @@
 ﻿namespace Naviam.DataAnalyzer.QA.UnitTests.Infrastructure.Amazon
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
 
