@@ -11,6 +11,7 @@
 
     using Naviam.DataAnalyzer.Model.Account;
     using Naviam.DataAnalyzer.Model.DataSource;
+    using Naviam.DataAnalyzer.Model.Filter;
 
     public class DynamoDbRepository
     {
@@ -40,6 +41,10 @@
                   .ForMember(x => x.Map, m => m.MapFrom(q => Json.Decode(q.Map, typeof(IEnumerable<MapInfo>))));
             Mapper.CreateMap<Account, Model.Account>();
             Mapper.CreateMap<Model.Account, Account>();
+            Mapper.CreateMap<Filter, Model.Filter>()
+                .ForMember(x => x.Criteria, m => m.MapFrom(q => Json.Encode(q.Criteria)));
+            Mapper.CreateMap<Model.Filter, Filter>()
+                .ForMember(x => x.Criteria, m => m.MapFrom(q => Json.Decode(q.Criteria, typeof(IEnumerable<Criterion>))));
         }
     }
 }

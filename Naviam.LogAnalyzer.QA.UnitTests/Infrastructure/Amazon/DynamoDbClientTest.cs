@@ -19,6 +19,7 @@
         {
             using (var client = new DynamoDbClient())
             {
+                // client.CreateTable("Filter", "DataSourceId", "Id", 10, 5);
                 var request = client.GetTableList();
                 Assert.IsNotNull(request);
             }

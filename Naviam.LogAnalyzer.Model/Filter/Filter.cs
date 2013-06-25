@@ -4,7 +4,11 @@ namespace Naviam.DataAnalyzer.Model.Filter
 
     public class Filter
     {
-        public IEnumerable<Condition> Conditions { get; set; }
+        public string Id { get; set; }
+
+        public string Name { get; set; }
+
+        public IEnumerable<Criterion> Criteria { get; set; }
 
         public CompareOperations CompareOperetion { get; set; }
 

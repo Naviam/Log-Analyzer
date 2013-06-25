@@ -6,7 +6,7 @@
     {
         public string Name { get; set; }
 
-        public abstract void Check(Condition condition);
+        public abstract void Check(Criterion criterion);
     }
 }
 
