@@ -55,6 +55,7 @@
     <Compile Include="AccountRepository.cs" />
     <Compile Include="DataSourceRepository.cs" />
     <Compile Include="DynamoDbRepository.cs" />
+    <Compile Include="FilterRepository.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\DataSource.cs" />
     <Compile Include="Model\Filter.cs" />

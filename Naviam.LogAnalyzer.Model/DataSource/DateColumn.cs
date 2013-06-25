@@ -8,7 +8,7 @@
     {
         public DateTime Value { get; set; }
 
-        public override void Check(Condition condition)
+        public override void Check(Criterion criterion)
         {
             throw new NotImplementedException();
         }

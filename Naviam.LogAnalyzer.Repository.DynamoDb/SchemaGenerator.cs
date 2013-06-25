@@ -16,7 +16,7 @@
         public void Generate()
         {
             var tables = client.GetTableList();
-            
+
             // drop tables
             if (tables.Contains("Account"))
             {
@@ -84,8 +84,8 @@
                                                                         },
                                         KeySchema = new List<KeySchemaElement>
                                                                 {
-                                                                    new KeySchemaElement{ AttributeName = "Id", KeyType = "HASH"},
-                                                                    new KeySchemaElement{ AttributeName = "DataSourceId", KeyType = "RANGE"}
+                                                                    new KeySchemaElement{ AttributeName = "DataSourceId", KeyType = "HASH"},
+                                                                    new KeySchemaElement{ AttributeName = "Id", KeyType = "RANGE"}
                                                                 },
                                         ProvisionedThroughput = new ProvisionedThroughput
                                         {

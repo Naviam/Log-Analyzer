@@ -14,6 +14,6 @@
 
         // http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ArbitraryDataMappingHLAPI.html
         // [DynamoDBProperty(typeof(DimensionTypeConverter))]
-        public string Criterias { get; set; }
+        public string Criteria { get; set; }
     }
 }

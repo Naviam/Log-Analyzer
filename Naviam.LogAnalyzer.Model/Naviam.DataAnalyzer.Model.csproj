@@ -54,7 +54,8 @@
     <Compile Include="DataSource\Record.cs" />
     <Compile Include="DataSource\StringColumn.cs" />
     <Compile Include="Filter\CompareOperations.cs" />
-    <Compile Include="Filter\Condition.cs" />
+    <Compile Include="Filter\Criterion.cs" />
+    <Compile Include="Filter\IFilterRepository.cs" />
     <Compile Include="Filter\IFiltrableColumn.cs" />
     <Compile Include="DataSource\Operations.cs" />
     <Compile Include="Filter\Filter.cs" />
