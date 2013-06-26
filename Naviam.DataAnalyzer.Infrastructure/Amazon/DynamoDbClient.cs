@@ -73,6 +73,43 @@
             return client.ListTables(new ListTablesRequest()).ListTablesResult.TableNames;
         }
 
+        public QueryResponse Query(QueryRequest request)
+        {
+            return client.Query(request);
+        }
+
+        public void CreateTable(string name, string fkName, string pkName, int reads, int writes)
+        {
+            var tables = GetTableList();
+
+            // drop table
+            if (tables.Contains(name))
+            {
+                DropTableReadyForUse(new DeleteTableRequest { TableName = name });
+            }
+
+            // create table
+            CreateTableAndReadyForUse(new CreateTableRequest
+            {
+                TableName = name,
+                AttributeDefinitions = new List<AttributeDefinition>
+                    { 
+                        new AttributeDefinition { AttributeName = fkName, AttributeType = "S" }, 
+                        new AttributeDefinition { AttributeName = pkName, AttributeType = "S" } 
+                    },
+                KeySchema = new List<KeySchemaElement>
+                    {
+                        new KeySchemaElement{ AttributeName = fkName, KeyType = "HASH"},
+                        new KeySchemaElement{ AttributeName = pkName, KeyType = "RANGE"}
+                    },
+                ProvisionedThroughput = new ProvisionedThroughput
+                {
+                    ReadCapacityUnits = reads,
+                    WriteCapacityUnits = writes
+                }
+            });
+        }
+
         public void Dispose()
         {
             client.Dispose();

@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Infrastructure\Amazon\DynamoDbAccountRepositoryTest.cs" />
     <Compile Include="Infrastructure\Amazon\DynamoDbDataSourceRepositoryTest.cs" />
+    <Compile Include="Infrastructure\Amazon\DynamoDbFilterRepositoryTest.cs" />
     <Compile Include="Infrastructure\Amazon\DynamoDbRepositoryTest.cs" />
     <Compile Include="Infrastructure\Amazon\DynamoDbClientTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

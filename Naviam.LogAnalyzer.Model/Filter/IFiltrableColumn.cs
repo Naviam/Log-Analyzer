@@ -2,6 +2,6 @@
 {
     public interface IFiltrableColumn
     {
-        void Check(Condition condition);
+        void Check(Criterion criterion);
     }
 }

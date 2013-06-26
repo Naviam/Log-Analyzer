@@ -44,6 +44,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +55,7 @@
     <Compile Include="AccountRepository.cs" />
     <Compile Include="DataSourceRepository.cs" />
     <Compile Include="DynamoDbRepository.cs" />
+    <Compile Include="FilterRepository.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\DataSource.cs" />
     <Compile Include="Model\Filter.cs" />

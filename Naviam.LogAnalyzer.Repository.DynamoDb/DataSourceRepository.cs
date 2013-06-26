@@ -2,8 +2,7 @@
 {
     using System.Collections.Generic;
     using System.Linq;
-
-    using Amazon.DynamoDBv2.DocumentModel;
+    using System.Web.Helpers;
 
     using AutoMapper;
 
@@ -12,20 +11,10 @@
 
     public class DataSourceRepository : DynamoDbRepository, IDataSourceRepository
     {
-        public DataSourceRepository()
-        {
-            Mapper.CreateMap<DataSource, DynamoDb.DataSource>();
-            Mapper.CreateMap<DynamoDb.DataSource, DataSource>();
-        }
-
         public DataSource GetDataSource(string id, string accountId)
         {
-            var ds = this.Context.Query<DynamoDb.DataSource>(accountId, QueryOperator.Equal, id).ToList();
-            if (ds.Count > 0)
-            {
-                return Mapper.Map<DynamoDb.DataSource, DataSource>(ds[0]);
-            }
-            return null;
+            var result = this.Context.Load<DynamoDb.DataSource>(accountId, id, null);
+            return Mapper.Map<DynamoDb.DataSource, DataSource>(result);
         }
 
         public IEnumerable<DataSource> GetDataSources(string accountId)
@@ -49,9 +38,8 @@
 
         public DataSource UpdateDataSource(DataSource dataSource, string accountId)
         {
-            var ds = this.Context.Load<DynamoDb.DataSource>(accountId, dataSource.Id);
-            ds.DataSourceType = (int)dataSource.DataSourceType;
-            ds.Name = dataSource.Name;
+            var ds = Mapper.Map<DataSource, DynamoDb.DataSource>(dataSource);
+            ds.AccountId = accountId;
             this.Context.Save(ds);
             return dataSource;
         }
