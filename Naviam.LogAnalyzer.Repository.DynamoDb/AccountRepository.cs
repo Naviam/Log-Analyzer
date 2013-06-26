@@ -7,12 +7,18 @@
 
     using Naviam.DataAnalyzer.Model.Account;
     using Naviam.DataAnalyzer.Model.DataSource;
+    using Naviam.DataAnalyzer.Model.Filter;
 
     using DynamoDb = Naviam.DataAnalyzer.Repository.DynamoDb.Model;
 
     public class AccountRepository : DynamoDbRepository, IAccountRepository
     {
         public Account GetAccount(string email)
+        {
+            return Mapper.Map<DynamoDb.Account, Account>(this.Context.Load<DynamoDb.Account>(email));
+        }
+
+        public Account GetAccountWithInternalData(string email)
         {
             var account = Mapper.Map<DynamoDb.Account, Account>(this.Context.Load<DynamoDb.Account>(email));
             if (account != null)
@@ -21,6 +27,16 @@
                     this.Context.Query<DynamoDb.DataSource>(email)
                         .Select(Mapper.Map<DynamoDb.DataSource, DataSource>)
                         .ToList();
+                if (account.DataSources != null)
+                {
+                    foreach (var var in account.DataSources)
+                    {
+                        var.Filters =
+                            this.Context.Query<DynamoDb.Filter>(var.Id)
+                        .Select(Mapper.Map<DynamoDb.Filter, Filter>)
+                        .ToList();
+                    }
+                }
             }
             return account;
         }

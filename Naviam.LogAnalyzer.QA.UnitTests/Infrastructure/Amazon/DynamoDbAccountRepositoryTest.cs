@@ -53,7 +53,13 @@
             Assert.IsNull(repository.GetAccount(accountId));
 
         }
-
+        
+        //[Test]
+        //public void Test2()
+        //{
+        //    var res= repository.GetAccount("email@0.com");
+        //}
+        
         [TearDown]
         public void Cleanup()
         {
