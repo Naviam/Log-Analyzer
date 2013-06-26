@@ -1,6 +1,7 @@
 ﻿using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Naviam.DataAnalyzer.Services.WebApi.App_Start;
 
 namespace Naviam.DataAnalyzer.Services.WebApi
 {
@@ -11,6 +12,8 @@ namespace Naviam.DataAnalyzer.Services.WebApi
     {
         protected void Application_Start()
         {
+            AutoMapperConfiguration.Configure();
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);

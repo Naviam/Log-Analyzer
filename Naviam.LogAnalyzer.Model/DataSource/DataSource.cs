@@ -11,6 +11,7 @@
 
         public IEnumerable<Filter> Filters { get; set; }
 
+        //TODO: create separate class for map
         public IEnumerable<MapInfo> Map { get; set; }
 
         public DataSourceTypes DataSourceType { get; set; }

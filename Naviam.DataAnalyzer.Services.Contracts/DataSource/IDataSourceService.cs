@@ -11,7 +11,7 @@ namespace Naviam.DataAnalyzer.Services.Contracts.DataSource
     {
         AddDataSourceResponse AddDataSource(AddDataSourceRequest request);
 
-        GetUserDataSourcesResponse GetUserDataSource(GetUserDataSourcesRequest request);
+        GetUserDataSourcesResponse GetUserDataSources(GetUserDataSourcesRequest request);
 
         GetDataSourceByIdResponse GetDataSource(GetDataSourceByIdRequest request);
 

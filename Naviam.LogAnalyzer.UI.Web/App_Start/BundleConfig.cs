@@ -1,4 +1,6 @@
-﻿using System.Web;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Web;
 using System.Web.Optimization;
 
 namespace Naviam.DataAnalyzer.UI.Web
@@ -8,17 +10,19 @@ namespace Naviam.DataAnalyzer.UI.Web
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+            var layoutBundle = new ScriptBundle("~/bundles/layout").Include(
+                "~/Scripts/jquery-{version}.js",
+                "~/scripts/jquery-ui-{version}.js",
+                "~/scripts/jquery.validate.js",
+                "~/scripts/jquery.validate.unobtrusive.js",
+                "~/Scripts/bootstrap.js",
+                "~/Scripts/knockout-2.2.0.js",
+                "~/Scripts/dropdown.js");
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
-                        "~/Scripts/jquery-ui-{version}.js"));
+            layoutBundle.Orderer = new AsIsBundleOrderer();
+            bundles.Add(layoutBundle);
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.unobtrusive*",
-                        "~/Scripts/jquery.validate*"));
-
-            bundles.Add(new ScriptBundle("~/bundles/dropdown").Include("~/Scripts/dropdown.js"));
+            bundles.Add(new ScriptBundle("~/bundles/addDataSource").Include("~/Scripts/ViewModels/AddDataSourceViewModel.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
@@ -43,6 +47,29 @@ namespace Naviam.DataAnalyzer.UI.Web
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
             
+        }
+    }
+
+    /// <summary>
+    /// The bundle order.
+    /// </summary>
+    public class AsIsBundleOrderer : IBundleOrderer
+    {
+        /// <summary>
+        /// The order files.
+        /// </summary>
+        /// <param name="context">
+        /// The context.
+        /// </param>
+        /// <param name="files">
+        /// The files.
+        /// </param>
+        /// <returns>
+        /// Collection of file info objects.
+        /// </returns>
+        public virtual IEnumerable<FileInfo> OrderFiles(BundleContext context, IEnumerable<FileInfo> files)
+        {
+            return files;
         }
     }
 }

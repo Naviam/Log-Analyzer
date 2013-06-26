@@ -16,8 +16,8 @@
                 </ul>
                 <ul class="nav pull-right">
                     <li >
-                        <a href="#addRestDataSourceModdalWindow" data-toggle="modal">Add Datasource</a>
-                       
+                       @* <a href="#addRestDataSourceModdalWindow" data-toggle="modal">Add Datasource</a>*@
+                       <a href="@Url.Action("AddDataSource", "Member")">Add Datasource</a>
                     </li>
                     <li><a href="#" title="Log Out">Log Out</a></li>
                 </ul>
@@ -26,8 +26,8 @@
         </div>
     </div>
 </div>
-<div class="pull-left">
-    @*Frequency:
+@*<div class="pull-left">
+    Frequency:
     <select>
         <option>1 min</option>
         <option>2 min</option>

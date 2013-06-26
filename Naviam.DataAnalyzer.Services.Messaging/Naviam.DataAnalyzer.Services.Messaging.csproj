@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="DataSource\AddDataSourceRequest.cs" />
     <Compile Include="DataSource\AddDataSourceResponse.cs" />
+    <Compile Include="DataSource\DatasourceResponse.cs" />
     <Compile Include="DataSource\GetDataSourceByIdRequest.cs" />
     <Compile Include="DataSource\GetDataSourceByIdResponse.cs" />
     <Compile Include="DataSource\GetUserDataSourcesRequest.cs" />

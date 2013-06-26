@@ -8,5 +8,6 @@ namespace Naviam.DataAnalyzer.Services.Messaging.DataSource
 {
     public class GetUserDataSourcesResponse
     {
+        public List<DatasourceResponse> DataSources { get; set; }
     }
 }

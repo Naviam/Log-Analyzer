@@ -13,7 +13,8 @@ namespace Naviam.DataAnalyzer.UI.Controllers
         {
             return this.View();
         }
-        public ActionResult View1()
+
+        public ActionResult AddDataSource()
         {
             return this.View();
         }

@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "AddDataSource";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="topmenu" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#">RTA</a>
+            <div class="nav-collapse">
+                <ul class="nav nav-pills">
+                    <li><a href="#" title="My Twits">My Twits</a></li>
+                    <li><a  href="#" title="ServiceChannel Errors">ServiceChannel Errors</a></li>
+                    
+                </ul>
+                <ul class="nav pull-right">
+                    <li class="active">
+                        <a href="#"  >Add Datasource</a>
+                       
+                    </li>
+                    <li><a href="#" title="Log Out">Log Out</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<div class="control-group">
+    <label class="control-label">Input format</label>
+    <div class="controls">
+        <select class="input-medium focused" disabled>
+            <option>JSON</option>
+        </select>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Name</label>
+    <div class="controls">
+        <input type="text" data-bind="value:dataSourceName" />
+    </div>
+</div>
+<table data-bind="visible:fieldsMapping().length!=0">
+    <thead>
+        <tr>
+            <td>Field name</td>
+            <td colspan="2">Field type</td>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: fieldsMapping">
+        <tr>
+            <td>
+                <input type="text" class="input-small" data-bind="value:fieldName" />
+            </td>
+            <td>
+                <select class="input-medium focused" data-bind="options: $parent.fieldTypes, optionsText: 'typeName', value: typeId, optionsCaption: 'Choose...'" >
+                </select>
+            </td>
+            <td>
+                <button class="btn btn-mini btn-danger" data-bind="click:$parent.removeFieldMapping"><i class="icon-white icon-remove"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<a href="#" class="btn btn-mini" data-bind="click:addFieldMapping">Add Field Mapping</a><br /><br />
+<a href="#" class="btn" data-bind="click:saveDataSource">Save DataSource</a>
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/addDataSource")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var addDatasourceViewModel = new AddDataSourceViewModel();
+
+            ko.applyBindings(addDatasourceViewModel);
+        });
+    </script>
+}
+

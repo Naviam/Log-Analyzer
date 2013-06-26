@@ -8,6 +8,7 @@ namespace Naviam.DataAnalyzer.Services.Messaging.DataSource
 {
     public class GetDataSourceByIdRequest
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
+        public string AccountId { get; set; }
     }
 }

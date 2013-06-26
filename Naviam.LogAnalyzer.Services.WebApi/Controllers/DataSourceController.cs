@@ -6,6 +6,7 @@
     using System.Web.Http;
     using Naviam.DataAnalyzer.Services.Contracts.DataSource;
     using Naviam.DataAnalyzer.Services.Messaging.DataSource;
+    using Naviam.DataAnalyzer.Services.WebApi.Models.DataSource;
 
     public class DataSourceController : ApiController
     {
@@ -20,24 +21,43 @@
         }
 
         // GET api/datasource?id=880557C8E4FC4D199912CE215090DCBD
-        public HttpResponseMessage Get(Guid id)
+        public HttpResponseMessage Get()
         {
-            var data = this._dataSourceService.GetDataSource(new GetDataSourceByIdRequest { Id = id });
+            var data = this._dataSourceService.GetUserDataSources(new GetUserDataSourcesRequest { AccountId = "CA844F2109F848C1998DE9DB2116D6C2" });
 
             if (data == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
 
-            var newMessage = this.Request.CreateResponse<GetDataSourceByIdResponse>(HttpStatusCode.OK, data);
-            return newMessage;
+            var restMessage = this.Request.CreateResponse<GetUserDataSourcesResponse>(HttpStatusCode.OK, data);
+            return restMessage;
+        }
+
+        // GET api/datasource?880557C8E4FC4D199912CE215090DCBD
+        public HttpResponseMessage Get(string id)
+        {
+            var data = this._dataSourceService.GetDataSource(new GetDataSourceByIdRequest { Id = id, AccountId="CA844F2109F848C1998DE9DB2116D6C2" });
+
+            if (data == null)
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+
+            var restMessage = this.Request.CreateResponse<GetDataSourceByIdResponse>(HttpStatusCode.OK, data);
+            return restMessage;
         }
 
 
         // POST api/datasource
-        public HttpResponseMessage Post([FromBody]object value)
+        public HttpResponseMessage Post([FromBody]DataSourceViewModel model)
         {
-            return null;
+            var request = new AddDataSourceRequest { DataSourceName = model.DataSourceName, AccountId = "CA844F2109F848C1998DE9DB2116D6C2" };
+
+            var response = this._dataSourceService.AddDataSource(request);
+
+            var restMessage = this.Request.CreateResponse<AddDataSourceResponse>(HttpStatusCode.OK, response);
+            return restMessage;
         }
 
         // PUT api/datasource/5

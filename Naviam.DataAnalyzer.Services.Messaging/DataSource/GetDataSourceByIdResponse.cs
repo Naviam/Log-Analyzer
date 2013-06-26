@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Naviam.DataAnalyzer.Services.Messaging.DataSource
 {
-    public class GetDataSourceByIdResponse
+    public class GetDataSourceByIdResponse:DatasourceResponse
     {
     }
 }
