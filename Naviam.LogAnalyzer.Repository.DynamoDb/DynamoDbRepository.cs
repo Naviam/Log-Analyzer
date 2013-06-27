@@ -46,5 +46,73 @@
             Mapper.CreateMap<Model.Filter, Filter>()
                 .ForMember(x => x.Criteria, m => m.MapFrom(q => Json.Decode(q.Criteria, typeof(IEnumerable<Criterion>))));
         }
+
+        public void PrepareTestData(int accountsNumber)
+        {
+            for (var k = 0; k < accountsNumber; k++)
+            {
+                Context.Save<Model.Account>(
+                    new Model.Account
+                        {
+                            CreationDate = DateTime.UtcNow,
+                            Email = string.Format(@"email@{0}.com", k),
+                            Name = string.Format(@"testAccount{0}", k),
+                            Password = "blabla"
+                        });
+                for (var i = 0; i < 3; i++)
+                {
+                    var dataSource =
+                        Mapper.Map<DataSource, Model.DataSource>(
+                            new DataSource()
+                                {
+                                    DataSourceType = DataSourceTypes.SelfEndpoint,
+                                    Id = GetNewKey(),
+                                    Map =
+                                        new List<MapInfo>()
+                                            {
+                                                new MapInfo()
+                                                    { PropertyName = "prop1", PropertyType = PropertyTypes.String },
+                                                new MapInfo()
+                                                    { PropertyName = "prop2", PropertyType = PropertyTypes.Number }
+                                            },
+                                    Name = string.Format(@"testDS{0}", i),
+                                });
+                    dataSource.AccountId = string.Format(@"email@{0}.com", k);
+                    this.Context.Save(dataSource);
+                    for (var x = 0; x < 3; x++)
+                    {
+                        var filter = Mapper.Map<Filter, Model.Filter>(
+                            new Filter()
+                            {
+                                Id = GetNewKey(),
+                                CompareOperetion = CompareOperations.And,
+                                Name = string.Format(@"testFilter{0}", x),
+                                Criteria = new List<Criterion>()
+                                    {
+                                        new Criterion()
+                                            {
+                                                ColumnName = "Column1",
+                                                IsExclude = false,
+                                                Operation = Operations.Equal,
+                                                StringValue = "zaaazzz"
+                                            },
+                                        new Criterion()
+                                            {
+                                                ColumnName = "Column2",
+                                                IsExclude = true,
+                                                Operation = Operations.Like,
+                                                StringValue = "%aaa%"
+                                            }
+                                    }
+                            }
+                            );
+                        filter.DataSourceId = dataSource.Id;
+                        this.Context.Save(filter);
+                    }
+                }
+            }
+            
+        }
+
     }
 }
