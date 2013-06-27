@@ -65,6 +65,10 @@
       <Project>{5F5E4C34-8A30-4C49-A20E-DA5ECA2177CC}</Project>
       <Name>Naviam.DataAnalyzer.Infrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Naviam.DataAnalyzer.Services.Concrete\Naviam.DataAnalyzer.Services.Concrete.csproj">
+      <Project>{8cfccaef-43ab-4842-9805-7d89282ecd8e}</Project>
+      <Name>Naviam.DataAnalyzer.Services.Concrete</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Naviam.LogAnalyzer.Model\Naviam.DataAnalyzer.Model.csproj">
       <Project>{13571DCA-D03A-4E33-96F5-022EE41139FD}</Project>
       <Name>Naviam.DataAnalyzer.Model</Name>
@@ -74,6 +78,7 @@
       <Name>Naviam.DataAnalyzer.Repository.DynamoDb</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
