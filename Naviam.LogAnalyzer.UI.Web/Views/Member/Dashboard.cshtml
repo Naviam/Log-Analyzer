@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Naviam.DataAnalyzer.UI.Controllers.Models.MemberDashboardViewModel
+@{
     ViewBag.Title = "Dashboard";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -10,14 +11,13 @@
             <a class="brand" href="#">RTA</a>
             <div class="nav-collapse">
                 <ul class="nav nav-pills">
-                    <li  class="active"><a href="#MyTwits" data-toggle="tab" title="My Twits">My Twits</a></li>
-                    <li><a data-toggle="tab" href="#ScLogs" title="ServiceChannel Errors">ServiceChannel Errors</a></li>
-                    
+                    <li><a href="#" data-toggle="tab" title="My Twits">My Account</a></li>
+                    <li><a href="#" title="ServiceChannel Errors">Settings</a></li>
                 </ul>
                 <ul class="nav pull-right">
-                    <li >
-                       @* <a href="#addRestDataSourceModdalWindow" data-toggle="modal">Add Datasource</a>*@
-                       <a href="@Url.Action("AddDataSource", "Member")">Add Datasource</a>
+                    <li>
+                        @* <a href="#addRestDataSourceModdalWindow" data-toggle="modal">Add Datasource</a>*@
+                        <a href="@Url.Action("AddDataSource", "Member")">Add Datasource</a>
                     </li>
                     <li><a href="#" title="Log Out">Log Out</a></li>
                 </ul>
@@ -26,115 +26,99 @@
         </div>
     </div>
 </div>
-@*<div class="pull-left">
-    Frequency:
-    <select>
-        <option>1 min</option>
-        <option>2 min</option>
-        <option>3 min</option>
-        <option>4 min</option>
-        <option>5 min</option>
-    </select>
-    Show last:
-    <select>
-        <option>10</option>
-        <option>50</option>
-        <option>100</option>
-    </select>
-</div>*@
-@*<ul class="nav nav-pills pull-right">
 
-    <li>
-        <button type="button" class="btn btn-primary">Add Allert</button></li>
-    <li>
-        <button type="button" class="btn btn-primary">Add Filter</button></li>
-    <li class="dropdown">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Add DataSource<b class="caret"></b></button>
-        <ul class="dropdown-menu" role="menu">
-            <li><a href="#addRestDataSourceModdalWindow" role="menuitem" data-toggle="modal">HTTP/REST</a></li>
-        </ul>
-    </li>
-</ul>*@
-
-@{ Html.RenderPartial("_addRestDataSource");}
-
-<div class="tab-content">
-    <div class="tab-pane active" id="MyTwits">
-        @{ Html.RenderPartial("_dashboardDataFiltersAlt");}
-        <table class="table table-condensed">
-            <tr>
-                <th>Date</th>
-                <th>Nickname</th>
-                <th>Text</th>
-                <th>Age</th>
-                <th>Public</th>
-            </tr>
-            <tr>
-                <td>28.05.2013</td>
-                <td>John Smith</td>
-                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
-                <td>22</td>
-                <td>
-                    <input type="checkbox" disabled checked /></td>
-            </tr>
-            <tr>
-                <td>28.05.2013</td>
-                <td>John Smith</td>
-                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
-                <td>22</td>
-                <td>
-                    <input type="checkbox" disabled checked /></td>
-            </tr>
-            <tr>
-                <td>28.05.2013</td>
-                <td>John Smith</td>
-                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
-                <td>22</td>
-                <td>
-                    <input type="checkbox" disabled /></td>
-            </tr>
-            <tr>
-                <td>28.05.2013</td>
-                <td>John Smith</td>
-                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
-                <td>22</td>
-                <td>
-                    <input type="checkbox" disabled checked /></td>
-            </tr>
-            <tr>
-                <td>28.05.2013</td>
-                <td>John Smith</td>
-                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
-                <td>22</td>
-                <td>
-                    <input type="checkbox" disabled /></td>
-            </tr>
-        </table>
-        Total Records: <b>5</b>
+@*@{ Html.RenderPartial("_addRestDataSource");}*@
+<div>
+    <div style="float: left; width: 15%;">
+        <div class="tabbable tabs-left">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#MyTwits" data-toggle="tab" title="My Twits">My Twits</a></li>
+                <li><a data-toggle="tab" href="#ScLogs" title="ServiceChannel Errors">ServiceChannel Errors</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="tab-pane " id="ScLogs">
-        <a href="#" id="filterAnchor">Manage filters</a>
-        @{ Html.RenderPartial("_dashboardDataFilters");}<br />
-        <b>Datasource ID: 32B08481-9298-48C6-AFCF-644B5A2CC5A3</b><br />
-        <input type="text" id="dsId" />
-        <input type="button" value="Open Connection" id="btnOpnCon" />
-        <table id="tbContent" class="table table-condensed">
-            <tr>
-                <th>Key</th>
-                <th>Message</th>
-                <th>Exception</th>
-                <th>Level</th>
-                <th>Date</th>
-            </tr>
-        </table>
-        Total Records: <b>4</b>
+    <div style="float: left; width: 85%">
+        <div class="tab-content">
+            <div class="tab-pane active" id="MyTwits">
+                @{ Html.RenderPartial("_dashboardDataFiltersAlt");}
+                <table class="table table-condensed">
+                    <tr>
+                        <th>Date</th>
+                        <th>Nickname</th>
+                        <th>Text</th>
+                        <th>Age</th>
+                        <th>Public</th>
+                    </tr>
+                    <tr>
+                        <td>28.05.2013</td>
+                        <td>John Smith</td>
+                        <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
+                        <td>22</td>
+                        <td>
+                            <input type="checkbox" disabled checked /></td>
+                    </tr>
+                    <tr>
+                        <td>28.05.2013</td>
+                        <td>John Smith</td>
+                        <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
+                        <td>22</td>
+                        <td>
+                            <input type="checkbox" disabled checked /></td>
+                    </tr>
+                    <tr>
+                        <td>28.05.2013</td>
+                        <td>John Smith</td>
+                        <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
+                        <td>22</td>
+                        <td>
+                            <input type="checkbox" disabled /></td>
+                    </tr>
+                    <tr>
+                        <td>28.05.2013</td>
+                        <td>John Smith</td>
+                        <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
+                        <td>22</td>
+                        <td>
+                            <input type="checkbox" disabled checked /></td>
+                    </tr>
+                    <tr>
+                        <td>28.05.2013</td>
+                        <td>John Smith</td>
+                        <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</td>
+                        <td>22</td>
+                        <td>
+                            <input type="checkbox" disabled /></td>
+                    </tr>
+                </table>
+                Total Records: <b>5</b>
+            </div>
+            <div class="tab-pane " id="ScLogs">
+                <a href="#" id="filterAnchor">Manage filters</a>
+                @{ Html.RenderPartial("_dashboardDataFilters");}
+                <br />
+                <b>Datasource ID: 32B08481-9298-48C6-AFCF-644B5A2CC5A3</b><br />
+                <input type="text" id="dsId" />
+                <input type="button" value="Open Connection" id="btnOpnCon" />
+                <table id="tbContent" class="table table-condensed">
+                    <tr>
+                        <th>Key</th>
+                        <th>Message</th>
+                        <th>Exception</th>
+                        <th>Level</th>
+                        <th>Date</th>
+                    </tr>
+                </table>
+                Total Records: <b>4</b>
+            </div>
+
+        </div>
     </div>
-    
 </div>
+<input id="model" type="hidden" value="@(new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(Model))" />
 @section Scripts
 {
+    @Scripts.Render("~/bundles/memberDashBoard")
 
-    @Scripts.Render("~/Scripts/jquery.signalR-1.1.2.min.js")
     <script type="text/javascript">
         $(document).ready(function () {
             $('#filterAnchor').popover({
@@ -156,6 +140,10 @@
                     });
                 });
             });
+            
+            var memberDashboardViewModel = new MemberDashboardViewModel($("#model").val());
+
+            ko.applyBindings(memberDashboardViewModel);
         });
     </script>
 }
