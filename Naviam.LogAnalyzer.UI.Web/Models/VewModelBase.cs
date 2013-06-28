@@ -8,7 +8,7 @@ namespace Naviam.DataAnalyzer.UI.Web.Models
 {
     public abstract class VewModelBase
     {
-        protected string ApiUrl
+        public string ApiUrl
         {
             get
             {

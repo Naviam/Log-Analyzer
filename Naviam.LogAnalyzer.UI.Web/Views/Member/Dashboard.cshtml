@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Naviam.DataAnalyzer.UI.Controllers.Models.MemberDashboardViewModel
+@{
     ViewBag.Title = "Dashboard";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -113,10 +114,11 @@
         </div>
     </div>
 </div>
+<input id="model" type="hidden" value="@(new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(Model))" />
 @section Scripts
 {
+    @Scripts.Render("~/bundles/memberDashBoard")
 
-    @Scripts.Render("~/Scripts/jquery.signalR-1.1.2.min.js")
     <script type="text/javascript">
         $(document).ready(function () {
             $('#filterAnchor').popover({
@@ -138,6 +140,10 @@
                     });
                 });
             });
+            
+            var memberDashboardViewModel = new MemberDashboardViewModel($("#model").val());
+
+            ko.applyBindings(memberDashboardViewModel);
         });
     </script>
 }
