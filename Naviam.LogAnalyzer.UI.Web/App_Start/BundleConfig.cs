@@ -15,6 +15,7 @@ namespace Naviam.DataAnalyzer.UI.Web
                 "~/scripts/jquery-ui-{version}.js",
                 "~/scripts/jquery.validate.js",
                 "~/scripts/jquery.validate.unobtrusive.js",
+                "~/Scripts/json2.js",
                 "~/Scripts/bootstrap.js",
                 "~/Scripts/knockout-2.2.0.js",
                 "~/Scripts/dropdown.js");
@@ -23,6 +24,8 @@ namespace Naviam.DataAnalyzer.UI.Web
             bundles.Add(layoutBundle);
 
             bundles.Add(new ScriptBundle("~/bundles/addDataSource").Include("~/Scripts/ViewModels/AddDataSourceViewModel.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/memberDashBoard").Include("~/Scripts/jquery.signalR-1.1.2.js", "~/Scripts/ViewModels/MemberDashboardViewModel.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
