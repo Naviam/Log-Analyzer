@@ -4,10 +4,9 @@
 
 var settings;
 
-function Datasource(serverModel) {
+function Datasource(parsedModel) {
     var self = this;
-    var parsedModel = JSON.parse(serverModel);
-    self.dataSourceName = parsedModel.DataSourceName;
+    self.dataSourceName = parsedModel.Name;
 }
 
 function MemberDashboardViewModel(serverModel) {
@@ -20,11 +19,10 @@ function MemberDashboardViewModel(serverModel) {
 
     self.loadDataSources = function() {
         $.get(settings.apiUrl+"datasource", function (data) {
-            var datasources = ko.toJS(data);
             self.userDatasources.removeAll();
-            $.each(datasources, function (index, value) {
+            $.each(data.DataSources, function (index, value) {
                 var ds = new Datasource(value);
-                self.userDatasources.unshift(retailer.url);
+                self.userDatasources.unshift(ds);
             });
         });
     };

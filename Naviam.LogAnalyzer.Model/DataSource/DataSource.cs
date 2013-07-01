@@ -7,6 +7,8 @@
     {
         public string Id { get; set; }
 
+        public string AccountId { get; set; }
+
         public string Name { get; set; }
 
         public IEnumerable<Filter> Filters { get; set; }
