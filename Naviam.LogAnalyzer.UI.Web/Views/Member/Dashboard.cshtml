@@ -8,16 +8,16 @@
 <div id="topmenu" class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container-fluid">
-            <a class="brand" href="#">RTA</a>
+            <a class="brand" href="@Url.Action("Dashboard", "Member")">RTA</a>
             <div class="nav-collapse">
                 <ul class="nav nav-pills">
-                    <li><a href="#" data-toggle="tab" title="My Twits">My Account</a></li>
-                    <li><a href="#" title="ServiceChannel Errors">Settings</a></li>
+                    <li><a href="#" >My Account</a></li>
+                    <li><a href="#" >Settings</a></li>
                 </ul>
                 <ul class="nav pull-right">
                     <li>
                         @* <a href="#addRestDataSourceModdalWindow" data-toggle="modal">Add Datasource</a>*@
-                        <a href="@Url.Action("AddDataSource", "Member")">Add Datasource</a>
+                        <a href="@Url.Action("NewDataSource", "Member")">Add Datasource</a>
                     </li>
                     <li><a href="#" title="Log Out">Log Out</a></li>
                 </ul>
@@ -31,9 +31,10 @@
 <div>
     <div style="float: left; width: 15%;">
         <div class="tabbable tabs-left">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#MyTwits" data-toggle="tab" title="My Twits">My Twits</a></li>
-                <li><a data-toggle="tab" href="#ScLogs" title="ServiceChannel Errors">ServiceChannel Errors</a></li>
+            <ul class="nav nav-tabs" data-bind="foreach:userDatasources">
+                <li><a href="#" data-bind="text:dataSourceName"></a></li>
+                @*<li class="active"><a href="#MyTwits" data-toggle="tab" title="My Twits">My Twits</a></li>
+                <li><a data-toggle="tab" href="#ScLogs" title="ServiceChannel Errors">ServiceChannel Errors</a></li>*@
             </ul>
         </div>
     </div>

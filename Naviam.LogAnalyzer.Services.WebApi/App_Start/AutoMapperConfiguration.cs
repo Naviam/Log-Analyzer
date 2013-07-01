@@ -22,6 +22,7 @@ namespace Naviam.DataAnalyzer.Services.WebApi.App_Start
             Mapper.CreateMap<DataSource, GetDataSourceByIdResponse>();
             Mapper.CreateMap<IEnumerable<DataSource>, GetUserDataSourcesResponse>().ForMember(
                 resp => resp.DataSources, opt => opt.MapFrom(source => source));
+
         }
     }
 }

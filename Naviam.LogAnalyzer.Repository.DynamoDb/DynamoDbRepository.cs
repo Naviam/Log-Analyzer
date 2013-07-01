@@ -38,7 +38,7 @@
             Mapper.CreateMap<DataSource, Model.DataSource>()
                   .ForMember(x => x.Map, m => m.MapFrom(q => Json.Encode(q.Map)));
             Mapper.CreateMap<Model.DataSource, DataSource>()
-                  .ForMember(x => x.Map, m => m.MapFrom(q => Json.Decode(q.Map, typeof(IEnumerable<MapInfo>))));
+                .ForMember(x => x.Map, m => m.MapFrom(q =>string.IsNullOrEmpty(q.Map)? null : Json.Decode(q.Map, typeof(IEnumerable<MapInfo>))));
             Mapper.CreateMap<Account, Model.Account>();
             Mapper.CreateMap<Model.Account, Account>();
             Mapper.CreateMap<Filter, Model.Filter>()
